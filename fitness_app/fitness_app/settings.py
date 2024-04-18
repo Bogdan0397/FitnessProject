@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'fitness'
 ]
 
+
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
