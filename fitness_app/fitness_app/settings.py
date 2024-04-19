@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-# this is my swamp
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+AUTH_USER_MODEL = 'user.User'
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,7 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'fitness'
+    'user',
+
+    'fitness',
+    'cachalot',
+
+
 ]
 
 MIDDLEWARE = [
@@ -77,8 +82,11 @@ WSGI_APPLICATION = 'fitness_app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': os.environ.get('DB_HOST'),
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
     }
 }
 
@@ -119,7 +127,42 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATIC_ROOT = BASE_DIR / 'static'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# CELERY_BROKER_URL = 'redis://redis:6379/0'
+
+PRICE_CACHE_NAME = 'price_cache'
+
+LOGGING = {
+    'version':1,
+    'handlers':{
+        'console':{'class':'logging.StreamHandler'}
+    },
+
+    'loggers':{
+        'django.db.backends':
+            {
+             'handlers':['console'],
+             'level':'DEBUG'
+             }
+    }
+}
+
+CELERY_BROKER_URL = 'redis://redis:6379/0'
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://redis:6379/1",
+    }
+}
+
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
+

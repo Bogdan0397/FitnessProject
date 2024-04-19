@@ -1,0 +1,103 @@
+services:
+  web-app:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./fitness_app:/fitness_app
+
+    environment:
+      - DB_HOST=database
+      - DB_NAME=dbname
+      - DB_USER=dbuser
+      - DB_PASSWORD=pass
+
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"
+
+    depends_on:
+      - database
+
+
+  database:
+    container_name: post_db
+    image: postgres:14.6
+    environment:
+      - POSTGRES_DB=dbname
+      - POSTGRES_USER=dbuser
+      - POSTGRES_PASSWORD=pass
+    ports:
+      - "5432:5432"
+
+  pgAdmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: koqfloqf@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: rampage12341
+    ports:
+      - "5050:80"
+
+  redis:
+    image: redis:7.0.5-alpine
+    hostname: redis
+    ports:
+      - "6379:6379"
+
+  worker:
+    build:
+      context: .
+    hostname: worker
+    entrypoint: celery
+    command: -A celery_app.app worker --loglevel=info
+    volumes:
+      - ./fitness_app:/fitness_app
+    links:
+      - redis
+    depends_on:
+      - redis
+      - database
+
+    environment:
+      - DB_HOST=database
+      - DB_NAME=dbname
+      - DB_USER=dbuser
+      - DB_PASSWORD=pass
+
+
+  worker2:
+    build:
+      context: .
+    hostname: worker2
+    entrypoint: celery
+    command: -A celery_app.app worker --loglevel=info
+    volumes:
+      - ./fitness_app:/fitness_app
+    links:
+      - redis
+    depends_on:
+      - redis
+      - database
+
+    environment:
+      - DB_HOST=database
+      - DB_NAME=dbname
+      - DB_USER=dbuser
+      - DB_PASSWORD=pass
+
+  flower:
+    build:
+      context: .
+    hostname: flower
+    entrypoint: celery
+    command: -A celery_app.app flower --loglevel=info
+    volumes:
+      - ./fitness_app:/fitness_app
+    links:
+      - redis
+    depends_on:
+      - redis
+    ports:
+      - "5555:5555"
+
