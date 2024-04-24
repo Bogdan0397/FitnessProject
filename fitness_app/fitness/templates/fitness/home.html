@@ -1,0 +1,26 @@
+<!-- home.html: This template extends the base and fills the content block -->
+{% extends "base.html" %}
+
+{% block title %}Welcome to Fitness Blender{% endblock %}
+
+{% block content %}
+<div class="main-content">
+    <h1>Feel Great. Body and Mind.</h1>
+    <p>Choose from hundreds of workouts, healthy recipes, relaxing meditations, and expert articles, for a whole body and mind approach to feeling great.</p>
+    <a href="{% url 'join' %}" class="join-btn">JOIN NOW</a>
+    <!-- Trainer profiles -->
+    <div class="trainer-profiles">
+        <!-- Assuming we have a context variable 'trainers' passed from a Django view -->
+        {% for trainer in trainers %}
+        <div class="profile">
+            <img src="{{ trainer.photo.url }}" alt="Profile image of {{ trainer.name }}">
+            <p>{{ trainer.name }}</p>
+            <p>{{ trainer.specialty }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<!-- Additional sections for the page -->
+
+
+{% endblock %}
