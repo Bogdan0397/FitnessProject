@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-#merge test
+def home(request):
+    return render(request,'fitness/home.html')

@@ -38,9 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'user',
-
-    'fitness',
+    'user.apps.UserConfig',
+    'fitness.apps.FitnessConfig',
     'cachalot',
 
 
@@ -61,7 +60,9 @@ ROOT_URLCONF = 'fitness_app.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates',
+                  ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,9 +126,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
-
-STATIC_ROOT = BASE_DIR / 'static'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / 'fitness_app' / 'static',]  # Путь к общей папке статических файлов
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -162,7 +163,5 @@ CACHES = {
         "LOCATION": "redis://redis:6379/1",
     }
 }
-
 MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'
-
