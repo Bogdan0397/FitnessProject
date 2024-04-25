@@ -1,13 +1,12 @@
 <!-- base.html: This is the base template which other templates will extend -->
-{% load static %}
-
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}My Fitness Site{% endblock %}</title>
     <!-- Add relevant CSS files -->
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="{% static 'fitness/css/styles.css' %}">
 </head>
 <body>
     <header>
@@ -27,6 +26,7 @@
                 </li>
                 {% endfor %}
             </ul>
+
         </nav>
     </header>
 
@@ -39,6 +39,6 @@
     </footer>
 
     <!-- Add relevant JS files -->
-    <script src="{% static 'dropdown.js' %}"></script>
+    <script src="{% static 'fitness/js/dropdown.js' %}"></script>
 </body>
 </html>
