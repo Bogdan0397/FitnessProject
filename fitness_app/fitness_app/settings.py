@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'user.apps.UserConfig',
     'fitness.apps.FitnessConfig',
+    'lifestyle.apps.LifestyleConfig',
     'cachalot',
 
 
