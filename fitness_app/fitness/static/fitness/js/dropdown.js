@@ -1,10 +1,9 @@
-// dropdown.js
-// This script will allow dropdown menus to function on hover
-
 document.addEventListener('DOMContentLoaded', function() {
-  var dropdowns = document.querySelectorAll('.dropdown');
+  console.log("Dropdown script loaded");
 
-  dropdowns.forEach(function(dropdown) {
+  var dropdowns = document.getElementsByClassName('dropdown');
+
+  Array.from(dropdowns).forEach(function(dropdown) {
     dropdown.addEventListener('mouseenter', function() {
       this.querySelector('.dropdown-content').style.display = 'block';
     });

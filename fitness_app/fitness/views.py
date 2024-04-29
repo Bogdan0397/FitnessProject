@@ -7,3 +7,10 @@ def home(request):
 
     return render(request,'fitness/home.html',categories)
 
+
+def about(request):
+    return render(request,'fitness/about.html')
+
+def contact(request):
+    return render(request,'fitness/contact.html')
+
