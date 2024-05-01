@@ -14,13 +14,13 @@
         <nav>
             <ul>
                 <!-- Use Django template for loop to generate menu items -->
-                {% for category in categories %}
+                {% for index in mainmenu %}
                 <li class="dropdown">
-                    <a href="#">{{ category.name }}</a>
+                    <a href="{% url index.url_name %}">{{ index.title }}</a>
                     <div class="dropdown-content">
                         <!-- Assuming each category has subcategories -->
-                        {% for subcategory in category.subcategories %}
-                        <a href="{% url 'category_view' subcategory.id %}">{{ subcategory.name }}</a>
+                        {% for subcategory in index.subcategories %}
+                        <a href="{% url subcategory.url_name %}">{{ subcategory.title }}</a>
                         {% endfor %}
                     </div>
                 </li>
