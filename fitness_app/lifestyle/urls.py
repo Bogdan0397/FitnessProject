@@ -3,10 +3,11 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
-from fitness import views
+
 
 urlpatterns = [
-    path('lifesytle/<slug:foodplan_slug>', views.home,name='article'),
-    path('lifesytle/<slug:food_slug>', views.home,name='dish')
+    path('lifestyle/',views.lifestyle_home, name='lifestyle_home'),
+    path('lifestyle/<slug:foodplan_slug>', views.home,name='article'),
+    path('lifestyle/<slug:food_slug>', views.home,name='dish')
 
 ]
