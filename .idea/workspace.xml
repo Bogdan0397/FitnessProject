@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86079984-a8f8-4cc2-aedc-ce19ada93fa5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/fitness_app/fitness/context_processors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fitness_app/fitness/templates/fitness/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fitness_app/fitness/templates/fitness/contact.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fitness_app/lifestyle/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/static/fitness/js/dropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/static/fitness/js/dropdown.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/fitness_app/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness_app/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +15,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="jarek" />
+        <entry key="$PROJECT_DIR$" value="bogdan" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
