@@ -14,6 +14,7 @@ class DayInline(admin.StackedInline):
     model = Day
     extra = 1  # Количество пустых форм для новых записей
     inlines = [MealsInline]
+    filter_horizontal = ('meals',)
 
 # Admin класс для Meals
 @admin.register(Meals)
