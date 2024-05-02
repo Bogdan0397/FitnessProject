@@ -21,3 +21,12 @@ class Exercises(models.Model):
 
     def get_absolute_url(self):
         return reverse('workout',kwargs={'exercise_slug': self.slug})
+
+class Day(models.Model):
+    program = models.ForeignKey('Programs', on_delete=models.CASCADE, related_name='days_train')
+    name = models.CharField(max_length=100)
+    exercises = models.ManyToManyField('Exercises', related_name='day_exercises', blank=True)
+
+    def __str__(self):
+        return f"{self.name} ({self.program.name})"
+
