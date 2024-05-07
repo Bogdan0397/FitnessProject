@@ -10,10 +10,9 @@ class MealsInline(admin.TabularInline):
     verbose_name_plural = "Add Meals"
 
 # Inline класс для отображения дней внутри плана питания
-class DayInline(admin.StackedInline):
+class DayInline(admin.TabularInline):
     model = Day
     extra = 1  # Количество пустых форм для новых записей
-    inlines = [MealsInline]
     filter_horizontal = ('meals',)
 
 # Admin класс для Meals
@@ -37,7 +36,6 @@ class DayAdmin(admin.ModelAdmin):
     list_filter = ('food_plan',)
     search_fields = ('name',)
     inlines = [MealsInline]
-    exclude = ('meals',)  # Исключаем поле meals из основной формы для избежания дублирования
     filter_horizontal = ('meals',)
 
 # Admin класс для Lifestyle
