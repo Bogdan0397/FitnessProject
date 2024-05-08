@@ -26,7 +26,6 @@ class MealsAdmin(admin.ModelAdmin):
 class FoodPlansAdmin(admin.ModelAdmin):
     list_display = ('name', 'slug')
     search_fields = ('name',)
-    exclude = ('meals',)
     inlines = [DayInline]  # Добавление inline для дней
 
 # Admin класс для Day

@@ -1,0 +1,13 @@
+{%for day in days%}
+<div class="post-tile">
+    <h3>{{ day.name }}</h3>
+    <ul>
+        {%for meal in day.meals.all%}
+            <li>
+                {{meal.name}}
+                <p>{{meal.content}}</p>
+            </li>
+        {%endfor%}
+    </ul>
+</div>
+{%endfor%}

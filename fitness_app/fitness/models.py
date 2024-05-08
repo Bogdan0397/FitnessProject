@@ -7,7 +7,7 @@ class Workout(models.Model):
     slug = models.SlugField(max_length=100, unique=True, db_index=True)
 
 class Programs(models.Model):
-    exercises = models.ManyToManyField('Exercises', related_name='exercises', null=True, blank=True, verbose_name='Exercises')
+    exercises = models.ManyToManyField('Exercises', related_name='exercises', blank=True, verbose_name='Exercises')
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, unique=True, db_index=True)
 

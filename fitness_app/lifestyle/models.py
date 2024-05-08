@@ -12,13 +12,12 @@ class Lifestyle(models.Model):
 
 
 class FoodPlans(models.Model):
-    meals = models.ManyToManyField('Meals',related_name='meals',null=True, blank=True,verbose_name='Meals')
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, unique=True, db_index=True)
-
+    description = models.CharField(max_length=500)
 
     def get_absolute_url(self):
-        return reverse('lifestyle',kwargs={'foodplan_slug': self.slug})
+        return reverse('foodplan',kwargs={'foodplan_slug': self.slug})
 
 
 class Meals(models.Model):
@@ -31,7 +30,7 @@ class Meals(models.Model):
 
 
 class Day(models.Model):
-    food_plan = models.ForeignKey('FoodPlans', on_delete=models.CASCADE, related_name='days')
+    food_plan = models.ForeignKey('FoodPlans', on_delete=models.CASCADE, related_name='foodplan')
     name = models.CharField(max_length=100)
     meals = models.ManyToManyField('Meals', related_name='day_meals', blank=True)
 

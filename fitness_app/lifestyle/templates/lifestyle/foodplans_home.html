@@ -1,0 +1,15 @@
+<!-- foodplans_home.html: This template extends the base and fills the content block -->
+{% extends "base.html" %}
+{%load lifestyle_tags%}
+{% block title %}Life Style{% endblock %}
+
+{% block content %}
+{%for post in foodplans%}
+<a href="{{ post.get_absolute_url }}" class="post-link">
+    <div class="post-tile">
+        <h3>{{ post.name }}</h3>
+        <p>{{ post.description|truncatechars:50 }}</p>
+    </div>
+</a>
+{%endfor%}
+{% endblock %}

@@ -1,0 +1,10 @@
+<!-- foodplans_home.html: This template extends the base and fills the content block -->
+{% extends "base.html" %}
+{%load lifestyle_tags%}
+{% block title %}FoodPlan{% endblock %}
+
+{% block content %}
+<h3>{{foodplan.name}}</h3>
+<p>{{foodplan.description}}</p>
+{% foodplans_home foodplan.slug %}
+{% endblock %}
