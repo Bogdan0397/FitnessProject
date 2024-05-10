@@ -5,6 +5,7 @@
 
 {% block content %}
 <h3>{{foodplan.name}}</h3>
+<p><img class="img-article-left" class="img-article-left" src="{{dish.photo.url}}"></p>
 <p>{{foodplan.description}}</p>
 {% foodplans_home foodplan.slug %}
 {% endblock %}

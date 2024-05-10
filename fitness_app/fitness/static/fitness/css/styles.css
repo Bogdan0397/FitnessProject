@@ -75,3 +75,10 @@ nav a {
 .profile img {
   border-radius: 50%;
 }
+
+img.img-article-left {
+	max-width: 300px;
+	height: auto;
+	float: left;
+	padding: 0 10px 10px 0;
+}

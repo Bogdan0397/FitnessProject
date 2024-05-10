@@ -2,10 +2,10 @@
 <div class="post-tile">
     <h3>{{ day.name }}</h3>
     <ul>
-        {%for meal in day.meals.all%}
+        {%for dish in day.meals.all%}
             <li>
-                {{meal.name}}
-                <p>{{meal.content}}</p>
+                <a href="{{ dish.get_absolute_url }}">{{dish.name}}</a>
+                <p>{{dish.content}}</p>
             </li>
         {%endfor%}
     </ul>

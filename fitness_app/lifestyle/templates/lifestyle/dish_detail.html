@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{%load lifestyle_tags%}
+
+{% block content %}
+<h1>{{dish.name}}</h1>
+
+{% if dish.photo %}
+<p><img class="img-article-left" class="img-article-left" src="{{dish.photo.url}}"></p>
+{%else%}
+<p><img class="img-article-left" class="img-article-left" src="{{dish_photo_default}}"></p>
+{% endif %}
+{{dish.content|linebreaks}}
+
+{% endblock %}

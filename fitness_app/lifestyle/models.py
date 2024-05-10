@@ -15,7 +15,7 @@ class FoodPlans(models.Model):
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, unique=True, db_index=True)
     description = models.CharField(max_length=500)
-
+    photo = models.ImageField(upload_to='photos/foodplans',default=None,null=True,blank=True,verbose_name='Photo_Foodplan')
     def get_absolute_url(self):
         return reverse('foodplan',kwargs={'foodplan_slug': self.slug})
 
@@ -24,9 +24,10 @@ class Meals(models.Model):
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, unique=True, db_index=True)
     content = models.CharField(max_length=100, blank=True)
+    photo = models.ImageField(upload_to='photos/dish_photos',default=None,null=True,blank=True,verbose_name='Photo_Dish')
 
     def get_absolute_url(self):
-        return reverse('lifestyle',kwargs={'food_slug': self.slug})
+        return reverse('dish',kwargs={'dish_slug': self.slug})
 
 
 class Day(models.Model):
