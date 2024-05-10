@@ -168,3 +168,5 @@ CACHES = {
     }
 }
 DEFAULT_DISH_IMAGE = MEDIA_URL + 'photos/dish_photos/default.jpg'
+DEFAULT_SUPP_IMAGE = MEDIA_URL + 'photos/supplement_photos/default.jpg'
+DEFAULT_FOODPLAN_IMAGE = MEDIA_URL + 'photos/foodplans/default.png'

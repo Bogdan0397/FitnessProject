@@ -38,3 +38,24 @@ class Day(models.Model):
     def __str__(self):
         return f"{self.name} ({self.food_plan.name})"
 
+
+class Supplements(models.Model):
+    name = models.CharField(max_length=50)
+    slug = models.SlugField(max_length=100, unique=True, db_index=True)
+    content = models.CharField(max_length=100, blank=True)
+    photo = models.ImageField(upload_to='photos/supplement_photos', default=None, null=True, blank=True,
+                              verbose_name='Photo_Supp')
+    category = models.ForeignKey('Supplement_Cat', on_delete=models.SET_NULL, null=True, blank=True, related_name='supp_cat',
+                                   verbose_name="Supplement_category")
+
+    def get_absolute_url(self):
+        return reverse('supp',kwargs={'supp_slug': self.slug})
+
+
+class Supplement_Cat(models.Model):
+    name = models.CharField(max_length=50)
+    slug = models.SlugField(max_length=100, unique=True, db_index=True)
+    description = models.CharField(max_length=250)
+
+    def __str__(self):
+        return self.name

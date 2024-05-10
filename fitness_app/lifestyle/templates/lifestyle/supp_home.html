@@ -1,17 +1,16 @@
-<!-- foodplans_home.html: This template extends the base and fills the content block -->
 {% extends "base.html" %}
 {%load lifestyle_tags%}
 {% block title %}Life Style{% endblock %}
 
 {% block content %}
-{%for post in foodplans%}
+{%for post in supplements%}
 <a href="{{ post.get_absolute_url }}" class="post-link">
     <div class="post-tile">
         <h3>{{ post.name }}</h3>
         {%if post.photo%}
         <p><img class="img-article-left" style="width: 150px; height: auto;" src="{{post.photo.url}}"></p>
         {%else%}
-        <p><img class="img-article-left" style="width: 150px; height: auto;" src="{{default_foodplan_photo}}"></p>
+        <p><img class="img-article-left" style="width: 150px; height: auto;" src="{{supp_photo_default}}"></p>
         {%endif%}
         <p>{{ post.description|truncatechars:50 }}</p>
     </div>

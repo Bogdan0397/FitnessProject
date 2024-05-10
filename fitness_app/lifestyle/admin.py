@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Lifestyle, FoodPlans, Meals, Day
+from .models import Lifestyle, FoodPlans, Meals, Day, Supplements, Supplement_Cat
+
 
 # Inline класс для отображения модели Meals внутри Day
 
@@ -42,4 +43,17 @@ class DayAdmin(admin.ModelAdmin):
 class LifestyleAdmin(admin.ModelAdmin):
     list_display = ('name', 'foodplans')
     search_fields = ('name',)
-    list_filter = ('foodplans',)  # Фильтрация по планам питания
+    list_filter = ('foodplans',)
+
+
+@admin.register(Supplements)
+class SupplyAdmin(admin.ModelAdmin):
+    list_display = ('name', 'category')
+    search_fields = ('name',)
+    list_filter = ('name',)
+
+@admin.register(Supplement_Cat)
+class SupplyCatAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+    search_fields = ('name',)
+    list_filter = ('name',)

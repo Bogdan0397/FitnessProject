@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{%load lifestyle_tags%}
+
+{% block content %}
+<h1>{{supp.name}}</h1>
+<p>{{supp.category}}</p>
+{% if supp.photo %}
+<p><img class="img-article-left" class="img-article-left" src="{{supp.photo.url}}"></p>
+{%else%}
+<p><img class="img-article-left" class="img-article-left" src="{{supp_photo_default}}"></p>
+{% endif %}
+{{supp.content|linebreaks}}
+
+{% endblock %}
