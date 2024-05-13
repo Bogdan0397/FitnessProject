@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
   console.log("Dropdown script loaded");
 
-  var dropdowns = document.getElementsByClassName('dropdown');
+  // Используйте querySelectorAll для выбора элементов с классами 'dropdown' или 'menu-selected'
+  var dropdowns = document.querySelectorAll('.dropdown, .menu-selected');
 
   Array.from(dropdowns).forEach(function(dropdown) {
     dropdown.addEventListener('mouseenter', function() {

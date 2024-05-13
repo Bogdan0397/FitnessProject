@@ -15,10 +15,9 @@
             <ul>
                 <!-- Use Django template for loop to generate menu items -->
                 {% for index in mainmenu %}
-                <li class="dropdown">
+                <li class="{% if index.title == selected_menu %}menu-selected{% else %}dropdown{% endif %}">
                     <a href="{% url index.url_name %}">{{ index.title }}</a>
                     <div class="dropdown-content">
-                        <!-- Assuming each category has subcategories -->
                         {% for subcategory in index.subcategories %}
                         <a href="{% url subcategory.url_name %}">{{ subcategory.title }}</a>
                         {% endfor %}

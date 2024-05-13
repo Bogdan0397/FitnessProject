@@ -82,3 +82,19 @@ img.img-article-left {
 	float: left;
 	padding: 0 10px 10px 0;
 }
+
+.menu-selected a {
+    color: #ffffff; /* Белый цвет текста */
+    background-color: #007bff; /* Синий фон */
+    font-weight: bold; /* Жирное начертание текста */
+}
+
+.menu-selected .dropdown-content a {
+    color: #333333; /* Темно-серый цвет текста для подменю */
+    background-color: #f8f9fa; /* Светло-серый фон для подменю */
+}
+
+.menu-selected:hover .dropdown-content a {
+    color: #007bff; /* Синий цвет текста при наведении на подменю */
+    background-color: #ffffff; /* Белый фон при наведении на подменю */
+}

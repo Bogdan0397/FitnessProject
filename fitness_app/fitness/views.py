@@ -6,12 +6,11 @@ from django.shortcuts import render, get_object_or_404
 def home(request):
     return render(request,'fitness/home.html')
 
-
 def about(request):
-    return render(request,'fitness/about.html')
+    return render(request,'fitness/about.html',context={'selected_menu':'About'})
 
 def contact(request):
-    return render(request,'fitness/contact.html')
+    return render(request,'fitness/contact.html',context={'selected_menu':'About'})
 
 def workouthome(request):
     return render(request, 'fitness/workout_home.html')
