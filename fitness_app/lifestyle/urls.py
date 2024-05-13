@@ -3,7 +3,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
-from lifestyle import views
+from . import views
 from lifestyle.views import lifestylehome, Foodplan, FoodPlansHome, DishView, SupplementsHome, SuppView
 
 urlpatterns = [

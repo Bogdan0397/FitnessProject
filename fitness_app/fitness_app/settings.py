@@ -37,8 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'fitness',
-    'lifestyle',
 
     'user.apps.UserConfig',
     'fitness.apps.FitnessConfig',
@@ -172,3 +170,5 @@ CACHES = {
 DEFAULT_DISH_IMAGE = MEDIA_URL + 'photos/dish_photos/default.jpg'
 DEFAULT_SUPP_IMAGE = MEDIA_URL + 'photos/supplement_photos/default.jpg'
 DEFAULT_FOODPLAN_IMAGE = MEDIA_URL + 'photos/foodplans/default.png'
+DEFAULT_PROGRAM_IMAGE = MEDIA_URL + 'photos/programs/programma-trenirovok-dlja-muzhchin-v-zale.jpg'
+DEFAULT_EXRCISE_IMAGE = MEDIA_URL + 'photos/exercises/default_exercise_image.jpg'

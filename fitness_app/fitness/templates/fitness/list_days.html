@@ -1,0 +1,13 @@
+{%for day in days%}
+<div class="post-tile">
+    <h3>{{ day.name }}</h3>
+    <ul>
+        {%for exercise in day.exercises.all%}
+            <li>
+                <a href="{{ exercise.get_absolute_url }}">{{exercise.name}}</a>
+                <p>{{exercise.content}}</p>
+            </li>
+        {%endfor%}
+    </ul>
+</div>
+{%endfor%}

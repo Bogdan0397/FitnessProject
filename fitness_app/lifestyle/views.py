@@ -2,9 +2,9 @@ from django.conf import settings
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView
 
-from fitness.models import Day
-from lifestyle.models import FoodPlans, Meals, Supplements
-
+from .models import Day
+from .models import FoodPlans, Meals, Supplements
+from . import views
 
 # Create your views here.
 def lifestylehome(request):
