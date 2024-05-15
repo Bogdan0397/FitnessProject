@@ -23,8 +23,8 @@ class FoodPlansHome(DataMixin,ListView):
 
     def get_context_data(self,**kwargs):
         context = super().get_context_data(**kwargs)
-        default_photo = settings.DEFAULT_FOODPLAN_IMAGE
-        return self.get_mixin_context(context, default_photo=default_photo)
+        default_photo_foodplans_home = settings.DEFAULT_FOODPLAN_IMAGE
+        return self.get_mixin_context(context, default_photo_foodplans_home=default_photo_foodplans_home)
 
 
 
@@ -37,9 +37,9 @@ class Foodplan(DataMixin,DetailView):
         return get_object_or_404(FoodPlans,slug=self.kwargs[self.slug_url_kwarg])
     def get_context_data(self,**kwargs):
         context = super().get_context_data(**kwargs)
-        default_photo = settings.DEFAULT_FOODPLAN_IMAGE
+        default_photo_foodplan = settings.DEFAULT_FOODPLAN_IMAGE
 
-        return self.get_mixin_context(context, default_photo=default_photo)
+        return self.get_mixin_context(context, default_photo_foodplan=default_photo_foodplan)
 
 
 class DishView(DataMixin,DetailView):

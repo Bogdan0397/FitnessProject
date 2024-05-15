@@ -1,100 +1,77 @@
 body {
-  font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
 }
 
-header {
-  background-color: #00bcd4;
-  color: white;
-  padding: 1em 0;
+header nav {
+    background-color: white;
+    padding: 10px 0;
 }
 
-nav ul {
-  list-style-type: none;
-  padding: 0;
+header nav ul.menu {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-nav li {
-  display: inline-block;
-  margin-right: 20px;
-  position: relative;
+header nav ul.menu li {
+    position: relative;
+    margin: 0 10px;
+    min-width: 160px;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
+header nav ul.menu li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+header nav ul.menu li a:hover {
+    background-color: #ddd;
 }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+header nav ul.menu li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
+    top: 100%;
+    left: 0;
 }
 
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
+header nav ul.menu li .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+header nav ul.menu li .dropdown-content a:hover {
+    background-color: #f1f1f1;
 }
 
-.main-content {
-  padding: 20px;
-  background-color: #f2f2f2;
-}
-
-.join-btn {
-  background-color: #008cba;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.trainer-profiles {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.profile {
-  margin: 20px;
-  text-align: center;
-}
-
-.profile img {
-  border-radius: 50%;
-}
-
-img.img-article-left {
-	max-width: 300px;
-	height: auto;
-	float: left;
-	padding: 0 10px 10px 0;
+header nav ul.menu li:hover .dropdown-content {
+    display: block;
 }
 
 .menu-selected a {
-    color: #ffffff; /* Белый цвет текста */
-    background-color: #007bff; /* Синий фон */
-    font-weight: bold; /* Жирное начертание текста */
+    color: #ffffff;
+    background-color: #007bff;
 }
 
 .menu-selected .dropdown-content a {
-    color: #333333; /* Темно-серый цвет текста для подменю */
-    background-color: #f8f9fa; /* Светло-серый фон для подменю */
+    color: #333333;
+    background-color: #f8f9fa;
 }
 
 .menu-selected:hover .dropdown-content a {
-    color: #007bff; /* Синий цвет текста при наведении на подменю */
-    background-color: #ffffff; /* Белый фон при наведении на подменю */
+    color: #007bff;
+    background-color: #ffffff;
 }

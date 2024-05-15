@@ -8,7 +8,7 @@
 {%if foodplan.photo%}
 <p><img class="img-article-left" class="img-article-left" src="{{foodplan.photo.url}}"></p>
 {%else%}
-<p><img class="img-article-left" class="img-article-left" src="{{default_foodplan_photo}}"></p>
+<p><img class="img-article-left" class="img-article-left" src="{{default_photo_foodplan}}"></p>
 {%endif%}
 <p>{{foodplan.description}}</p>
 {% foodplans_home foodplan.slug %}
