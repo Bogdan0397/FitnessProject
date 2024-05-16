@@ -10,7 +10,7 @@
         {%if post.photo%}
         <p><img class="img-article-left" style="width: 150px; height: auto;" src="{{post.photo.url}}"></p>
         {%else%}
-        <p><img class="img-article-left" style="width: 150px; height: auto;" src="{{supp_photo_default}}"></p>
+        <p><img class="img-article-left" style="width: 150px; height: auto;" src="{{default_photo_supp}}"></p>
         {%endif%}
         <p>{{ post.description|truncatechars:50 }}</p>
     </div>

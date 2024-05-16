@@ -12,7 +12,7 @@
         <nav class="main-nav">
             <ul class="menu">
                 {% for index in mainmenu %}
-                <li class="dropdown {% if index.title == selected_menu %}menu-selected{% endif %}">
+                <li class="dropdown {% if index.title == selected_menu %}menu-selected selected{% endif %}">
                     <a href="{% url index.url_name %}">{{ index.title }}</a>
                     <div class="dropdown-content">
                         {% for subcategory in index.subcategories %}

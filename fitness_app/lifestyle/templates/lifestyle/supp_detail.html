@@ -7,7 +7,7 @@
 {% if supp.photo %}
 <p><img class="img-article-left" class="img-article-left" src="{{supp.photo.url}}"></p>
 {%else%}
-<p><img class="img-article-left" class="img-article-left" src="{{supp_photo_default}}"></p>
+<p><img class="img-article-left" class="img-article-left" src="{{default_photo_supp}}"></p>
 {% endif %}
 {{supp.content|linebreaks}}
 
