@@ -12,6 +12,7 @@ class Programs(models.Model):
     slug = models.SlugField(max_length=100, unique=True, db_index=True)
     photo = models.ImageField(upload_to='photos/programs', default=None, null=True, blank=True,
                               verbose_name='Photo_Program')
+    description = models.TextField(max_length=250,null=True)
     def get_absolute_url(self):
         return reverse('program',kwargs={'program_slug': self.slug})
 

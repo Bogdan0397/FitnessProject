@@ -3,17 +3,23 @@
 {% block title %}Life Style{% endblock %}
 
 {% block content %}
-{%for post in supplements%}
+<section>
+<div class="div-block">
+{% for post in supplements %}
 <a href="{{ post.get_absolute_url }}" class="post-link">
     <div class="post-tile">
-        <h3>{{ post.name }}</h3>
-        {%if post.photo%}
-        <p><img class="img-article-left" style="width: 150px; height: auto;" src="{{post.photo.url}}"></p>
-        {%else%}
-        <p><img class="img-article-left" style="width: 150px; height: auto;" src="{{default_photo_supp}}"></p>
-        {%endif%}
-        <p>{{ post.description|truncatechars:50 }}</p>
+        {% if post.photo %}
+        <div class="post-image" style="background-image: url('{{ post.photo.url }}');"></div>
+        {% else %}
+        <div class="post-image" style="background-image: url('{{ default_photo_supp }}');"></div>
+        {% endif %}
+        <div class="post-content">
+            <h3>{{ post.name }}</h3>
+            <p>{{ post.content|truncatechars:60 }}</p>
+        </div>
     </div>
 </a>
-{%endfor%}
+{% endfor %}
+</div>
+</section>
 {% endblock %}

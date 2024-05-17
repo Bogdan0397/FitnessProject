@@ -1,4 +1,6 @@
 from django.contrib import admin
+
+from .forms import FoodPlanAdminForm, SupplementsAdminForm, SupplementsCatsAdminForm
 from .models import Lifestyle, FoodPlans, Meals, Day, Supplements, Supplement_Cat
 
 
@@ -25,6 +27,7 @@ class MealsAdmin(admin.ModelAdmin):
 # Admin класс для FoodPlans
 @admin.register(FoodPlans)
 class FoodPlansAdmin(admin.ModelAdmin):
+    form = FoodPlanAdminForm
     list_display = ('name', 'slug','photo')
     search_fields = ('name',)
     inlines = [DayInline]  # Добавление inline для дней
@@ -39,21 +42,17 @@ class DayAdmin(admin.ModelAdmin):
     filter_horizontal = ('meals',)
 
 # Admin класс для Lifestyle
-@admin.register(Lifestyle)
-class LifestyleAdmin(admin.ModelAdmin):
-    list_display = ('name', 'foodplans')
-    search_fields = ('name',)
-    list_filter = ('foodplans',)
-
 
 @admin.register(Supplements)
 class SupplyAdmin(admin.ModelAdmin):
+    form = SupplementsAdminForm
     list_display = ('name', 'category')
     search_fields = ('name',)
     list_filter = ('name',)
 
 @admin.register(Supplement_Cat)
 class SupplyCatAdmin(admin.ModelAdmin):
+    form = SupplementsCatsAdminForm
     list_display = ('name',)
     search_fields = ('name',)
     list_filter = ('name',)

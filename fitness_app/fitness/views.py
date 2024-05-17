@@ -42,7 +42,7 @@ class Program(FitnessMixin,DetailView):
 
     def get_context_data(self,**kwargs):
         context = super().get_context_data(**kwargs)
-        default_program_photo = settings.settings.DEFAULT_PROGRAM_IMAGE
+        default_program_photo = settings.DEFAULT_PROGRAM_IMAGE
         return self.get_mixin_context(context, default_program_photo=default_program_photo)
 
 class ExerciseView(FitnessMixin,DetailView):
