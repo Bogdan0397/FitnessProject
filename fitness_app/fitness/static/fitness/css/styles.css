@@ -9,6 +9,7 @@ header nav {
     padding: 10px 0;
     display: grid;
     width: 100%;
+
 }
 
 header nav ul.menu {
@@ -33,6 +34,7 @@ header nav ul.menu li a {
     text-decoration: none;
     font-weight: bold;
     position: relative;
+    min-width:167px;
 }
 
 header nav ul.menu li a::after {
@@ -56,6 +58,7 @@ header nav ul.menu li a:not(.menu-selected):hover::after {
     width: 100%;
 }
 
+
 header nav ul.menu li .dropdown-content {
     display: none;
     position: absolute;
@@ -73,6 +76,7 @@ header nav ul.menu li .dropdown-content a {
     text-decoration: none;
     display: block;
     text-align: left;
+    text-align: center;
 }
 
 header nav ul.menu li .dropdown-content a:hover {
@@ -197,4 +201,14 @@ a.post-link p {
 a.post-link:hover h3,
 a.post-link:hover p {
     text-decoration: none;
+}
+
+.logo {
+    position: absolute;
+    left: 210px;
+    top: 0px;
+    background: url('../images/logo.svg') no-repeat center center;
+    background-size: 105px 120px;
+    width: 120px;
+    height: 70px;
 }
