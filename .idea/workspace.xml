@@ -5,24 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86079984-a8f8-4cc2-aedc-ce19ada93fa5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/fitness_app/fitness/migrations/0003_exercises_photo_programs_photo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fitness_app/fitness/templates/fitness/exercise_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fitness_app/fitness/templates/fitness/list_days.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fitness_app/fitness/templates/fitness/program.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fitness_app/fitness/templates/fitness/programs_home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fitness_app/fitness/templates/fitness/workout_home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fitness_app/fitness/templatetags/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fitness_app/fitness/templatetags/fitness_tags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fitness_app/media/photos/exercises/default_exercise_image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fitness_app/media/photos/programs/programma-trenirovok-dlja-muzhchin-v-zale.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitness_app/fitness/static/fitness/images/home1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/context_processors.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/context_processors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/static/fitness/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/static/fitness/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/static/fitness/js/dropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/static/fitness/js/dropdown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/templates/fitness/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/templates/fitness/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/templates/fitness/workout_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/templates/fitness/workout_home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fitness_app/fitness/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fitness_app/fitness_app/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness_app/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/lifestyle/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/lifestyle/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,13 +55,14 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Yaryk1488/Desktop/FitnessProject/fitness_app/media/photos/exercises",
+    "last_opened_file_path": "C:/Users/Yaryk1488/Desktop/FitnessProject/fitness_app/fitness/static/fitness/images",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "two.files.diff.last.used.folder": "C:/Users/Yaryk1488/Desktop/FitnessProject/fitness_app/lifestyle"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Yaryk1488\Desktop\FitnessProject\fitness_app\fitness\static\fitness\images" />
       <recent name="C:\Users\Yaryk1488\Desktop\FitnessProject\fitness_app\media\photos\exercises" />
       <recent name="C:\PythonFitnessWeb\FitnessProject" />
     </key>
@@ -169,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715581064150</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="common settings">
+      <created>1715590608001</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1715590608001</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

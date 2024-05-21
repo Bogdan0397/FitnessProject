@@ -212,3 +212,28 @@ a.post-link:hover p {
     width: 120px;
     height: 70px;
 }
+.container {
+    position: relative;
+    width: 100%; /* Ширина контейнера */
+}
+
+.home_image1 {
+    display: block;
+    width: 100%; /* Ширина изображения */
+    height: auto; /* Высота изображения, автоматически рассчитываемая */
+}
+
+.home_header1 {
+  position: absolute;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 62px;
+  color: #2C3E50;
+  white-space: pre;
+}
+.img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}

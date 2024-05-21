@@ -8,7 +8,8 @@ from fitness.utils import FitnessMixin
 
 
 def home(request):
-    return render(request,'fitness/home.html')
+
+    return render(request,'fitness/home.html',)
 
 def about(request):
     return render(request,'fitness/about.html',context={'selected_menu':'About'})
