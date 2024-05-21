@@ -1,15 +1,25 @@
 <!-- foodplans_home.html: This template extends the base and fills the content block -->
 {% extends "base.html" %}
-{%load lifestyle_tags%}
+{% load lifestyle_tags %}
 {% block title %}FoodPlan{% endblock %}
 
+{% block body_class %}foodplan-body{% endblock %}
+
 {% block content %}
-<h3>{{foodplan.name}}</h3>
-{%if foodplan.photo%}
-<p><img class="img-article-left" class="img-article-left" src="{{foodplan.photo.url}}"></p>
-{%else%}
-<p><img class="img-article-left" class="img-article-left" src="{{default_photo_foodplan}}"></p>
-{%endif%}
-<p>{{foodplan.description}}</p>
+<div class="image-container">
+    {% if foodplan.photo %}
+    <img class="centered-image" src="{{ foodplan.photo.url }}" alt="Food Plan Image">
+    {% else %}
+    <img class="centered-image" src="{{ default_photo_foodplan }}" alt="Default Food Plan Image">
+    {% endif %}
+</div>
+<table class="table-margin">
+    <tr>
+        <td style="vertical-align: top;">
+            <h2>{{foodplan.name}}</h2>
+            <p class="description-text">{{ foodplan.description }}</p>
+        </td>
+    </tr>
+</table>
 {% foodplans_home foodplan.slug %}
 {% endblock %}

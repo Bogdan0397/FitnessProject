@@ -14,7 +14,7 @@ class Lifestyle(models.Model):
 class FoodPlans(models.Model):
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, unique=True, db_index=True)
-    description = models.CharField(max_length=500)
+    description = models.CharField(max_length=1500)
     photo = models.ImageField(upload_to='photos/foodplans',default=None,null=True,blank=True,verbose_name='Photo_Foodplan')
     def get_absolute_url(self):
         return reverse('foodplan',kwargs={'foodplan_slug': self.slug})

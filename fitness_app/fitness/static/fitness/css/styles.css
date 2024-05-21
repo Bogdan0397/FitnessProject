@@ -4,12 +4,17 @@ body {
     margin: 0;
 }
 
+body-title {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+}
+
 header nav {
     background-color: white;
     padding: 10px 0;
     display: grid;
     width: 100%;
-
 }
 
 header nav ul.menu {
@@ -34,7 +39,7 @@ header nav ul.menu li a {
     text-decoration: none;
     font-weight: bold;
     position: relative;
-    min-width:167px;
+    min-width: 167px;
 }
 
 header nav ul.menu li a::after {
@@ -50,21 +55,19 @@ header nav ul.menu li a::after {
 
 header nav ul.menu li.selected a::after {
     transition: none;
-    height:0px;
-    /* Пустое свойство или изменения, которые должны отключить стиль для выбранного пункта */
+    height: 0px;
 }
 
 header nav ul.menu li a:not(.menu-selected):hover::after {
     width: 100%;
 }
 
-
 header nav ul.menu li .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 200px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     top: 100%;
     left: 0;
@@ -94,7 +97,6 @@ header nav ul.menu li .dropdown-content a::after {
     transition: width 0.3s;
 }
 
-
 header nav ul.menu li:hover .dropdown-content {
     display: block;
 }
@@ -106,9 +108,9 @@ header nav ul.menu li:hover .dropdown-content {
 }
 
 .menu-selected a::after {
-    width: 100%; /* Синяя линия подчеркивает выбранную категорию */
+    width: 100%;
     background-color: #007bff;
-    transition: none; /* Отключить анимацию для выбранной категории */
+    transition: none;
 }
 
 .menu-selected .dropdown-content a {
@@ -119,12 +121,11 @@ header nav ul.menu li:hover .dropdown-content {
 .menu-selected:hover .dropdown-content a {
     color: black;
     background-color: #ffffff;
-
 }
 
 .menu-selected .dropdown-content a::after {
     transition: none;
-    height:0px;
+    height: 0px;
 }
 
 header nav ul.menu li.menu-selected:hover .dropdown-content a::after {
@@ -148,11 +149,11 @@ header nav ul.menu li.menu-selected:hover .dropdown-content a::after {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    transition: transform 0.3s ease;  /* Добавлено плавное увеличение */
+    transition: transform 0.3s ease;
 }
 
 .post-tile:hover {
-    transform: scale(1.05);  /* Увеличение блока при наведении */
+    transform: scale(1.05);
 }
 
 .post-image {
@@ -212,28 +213,73 @@ a.post-link:hover p {
     width: 120px;
     height: 70px;
 }
+
 .container {
     position: relative;
-    width: 100%; /* Ширина контейнера */
+    width: 100%;
 }
 
 .home_image1 {
     display: block;
-    width: 100%; /* Ширина изображения */
-    height: auto; /* Высота изображения, автоматически рассчитываемая */
+    width: 100%;
+    height: auto;
 }
 
 .home_header1 {
-  position: absolute;
-  text-align: left;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 62px;
-  color: #2C3E50;
-  white-space: pre;
+    position: absolute;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 62px;
+    color: #2C3E50;
+    white-space: pre;
 }
+
 .img {
     max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
+}
+
+.responsive-media {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.header-image, .img-article-left {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.foodplan-body {
+    background-color: white;
+}
+
+.table-margin {
+    margin-left: 230px;
+    margin-right: 230px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.centered-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    width: 1440px;  /* Фиксированная ширина */
+    height: 702px;
+}
+
+.description-text {
+    font-size: 16px; /* Размер шрифта */
+    line-height: 1.6; /* Межстрочная высота */
+    color: #333; /* Цвет текста */
+    text-align: left; /* Выровнять по левому краю */
 }

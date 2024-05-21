@@ -51,7 +51,7 @@ class DishView(DataMixin,DetailView):
         return get_object_or_404(Meals,slug=self.kwargs[self.slug_url_kwarg])
     def get_context_data(self,**kwargs):
         context = super().get_context_data(**kwargs)
-        default_photo_dish = settings.settings.DEFAULT_DISH_IMAGE
+        default_photo_dish = settings.DEFAULT_DISH_IMAGE
         return self.get_mixin_context(context, default_photo_dish=default_photo_dish)
 
 

@@ -1,13 +1,17 @@
-{%for day in days%}
-<div class="post-tile">
-    <h3>{{ day.name }}</h3>
-    <ul>
-        {%for dish in day.meals.all%}
-            <li>
-                <a href="{{ dish.get_absolute_url }}">{{dish.name}}</a>
-                <p>{{dish.content}}</p>
-            </li>
-        {%endfor%}
-    </ul>
-</div>
-{%endfor%}
+{% for day in days %}
+<table class="table-margin">
+    <tr>
+        <td>
+            <h3>{{ day.name }}</h3>
+            <ul>
+                {% for dish in day.meals.all %}
+                <li>
+                    <a href="{{ dish.get_absolute_url }}">{{dish.name}}</a>
+                    <p>{{dish.content}}</p>
+                </li>
+                {% endfor %}
+            </ul>
+        </td>
+    </tr>
+</table>
+{% endfor %}
