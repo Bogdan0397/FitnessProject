@@ -1,6 +1,9 @@
 from django.db import models
 from django.db import models
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 from django.urls import reverse
+from django.utils.text import slugify
 
 
 # Create your models here.
@@ -22,10 +25,12 @@ class FoodPlans(models.Model):
 
 class Meals(models.Model):
     name = models.CharField(max_length=100)
-    slug = models.SlugField(max_length=100, unique=True, db_index=True)
-    content = models.CharField(max_length=100, blank=True)
+    slug = models.SlugField(max_length=100, db_index=True)
+    content = models.CharField(max_length=1500, blank=True)
     photo = models.ImageField(upload_to='photos/dish_photos',default=None,null=True,blank=True,verbose_name='Photo_Dish')
-
+    calories = models.IntegerField(null=True)
+    weight = models.IntegerField(null=True)
+    description = models.CharField(max_length=1500, blank=True)
     def get_absolute_url(self):
         return reverse('dish',kwargs={'dish_slug': self.slug})
 
@@ -59,3 +64,10 @@ class Supplement_Cat(models.Model):
 
     def __str__(self):
         return self.name
+
+
+@receiver(post_save, sender=Meals)
+def add_id_to_slug(sender, instance, created, **kwargs):
+    if created:
+        instance.slug = f'{slugify(instance.slug)}-{instance.id}'
+        instance.save()

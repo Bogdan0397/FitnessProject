@@ -258,10 +258,7 @@ a.post-link:hover p {
     background-color: white;
 }
 
-.table-margin {
-    margin-left: 230px;
-    margin-right: 230px;
-}
+
 
 .image-container {
     display: flex;
@@ -282,4 +279,78 @@ a.post-link:hover p {
     line-height: 1.6; /* Межстрочная высота */
     color: #333; /* Цвет текста */
     text-align: left; /* Выровнять по левому краю */
+}
+.table-margin-foodplan{
+
+    margin-left: 230px;
+    margin-right: 230px;
+}
+
+.table-margin {
+    width: 75.8%;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 230px;
+    margin-right: 230px;
+
+}
+
+.h3-foodplan {
+    background-color: #30821e;
+    color: white;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+}
+
+.meal-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.meal-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    position: relative;
+}
+
+.meal-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+
+}
+
+.meal-content {
+    flex-grow: 1;
+    margin-left: 20px; /* Adjust as needed */
+}
+
+.meal-description{
+    margin-left: 5px;
+    font-size: 16px;
+    color: #666;
+}
+.meal-calories,
+.meal-weight {
+    margin-left: 5px;
+    font-size: 14px;
+    color: #666;
+}
+.meal-name {
+    margin-left: 5px;
+    font-size: 18px;
+    color: #30821e;
+    font-weight: bold;
+}
+.meal-image {
+    width: 50px; /* Adjusted width */
+    height: 50px; /* Adjusted height */
+    background-image: url('../images/dish.svg'); /* URL of the small plate icon */
+    background-size: contain; /* Adjusted background size */
+    margin-right: 0px; /* Adjust as needed */
 }

@@ -24,6 +24,8 @@ class MealsAdmin(admin.ModelAdmin):
     list_display = ('name', 'slug', 'content','photo')  # Отображаемые поля в списке
     search_fields = ('name',)  # Поля, по которым можно проводить поиск
 
+
+
 # Admin класс для FoodPlans
 @admin.register(FoodPlans)
 class FoodPlansAdmin(admin.ModelAdmin):

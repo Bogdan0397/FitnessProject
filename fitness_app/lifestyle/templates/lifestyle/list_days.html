@@ -1,17 +1,35 @@
-{% for day in days %}
-<table class="table-margin">
-    <tr>
-        <td>
-            <h3>{{ day.name }}</h3>
-            <ul>
-                {% for dish in day.meals.all %}
-                <li>
-                    <a href="{{ dish.get_absolute_url }}">{{dish.name}}</a>
-                    <p>{{dish.content}}</p>
-                </li>
-                {% endfor %}
-            </ul>
-        </td>
-    </tr>
-</table>
-{% endfor %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список блюд</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    {% for day in days %}
+    <table class="table-margin">
+        <tr>
+            <td>
+                <h3 class="h3-foodplan">{{ day.name }}</h3>
+                <ul class="meal-list">
+                    {% for dish in day.meals.all %}
+                    <li class="meal-item">
+                        <a href="{{ dish.get_absolute_url }}" class="meal-link">
+                            <div class="meal-image"></div>
+                            <div class="meal-content">
+                                <p class="meal-name">{{ dish.name }}</p>
+                                <p class="meal-description">{{ dish.description }}</p>
+                                <p class="meal-calories">{{ dish.calories }} calories</p>
+                                <p class="meal-weight">{{ dish.weight }} g.</p>
+                            </div>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </td>
+        </tr>
+    </table>
+    {% endfor %}
+</body>
+</html>
