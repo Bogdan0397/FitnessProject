@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .forms import FoodPlanAdminForm, SupplementsAdminForm, SupplementsCatsAdminForm
+from .forms import FoodPlanAdminForm, SupplementsAdminForm, SupplementsCatsAdminForm, MealsAdminForm
 from .models import Lifestyle, FoodPlans, Meals, Day, Supplements, Supplement_Cat
 
 
@@ -21,9 +21,9 @@ class DayInline(admin.TabularInline):
 # Admin класс для Meals
 @admin.register(Meals)
 class MealsAdmin(admin.ModelAdmin):
-    list_display = ('name', 'slug', 'content','photo')  # Отображаемые поля в списке
+    list_display = ('name', 'slug', 'description','photo')  # Отображаемые поля в списке
     search_fields = ('name',)  # Поля, по которым можно проводить поиск
-
+    form = MealsAdminForm
 
 
 # Admin класс для FoodPlans
@@ -58,3 +58,4 @@ class SupplyCatAdmin(admin.ModelAdmin):
     list_display = ('name',)
     search_fields = ('name',)
     list_filter = ('name',)
+

@@ -182,8 +182,13 @@ header nav ul.menu li.menu-selected:hover .dropdown-content a::after {
     color: #333;
 }
 
-.post-content p {
-    margin: 10px 0 0;
+.category-supp {
+    font-size: 12px;
+    color: #848484 !important;
+}
+
+.description-supp {
+    margin: 0px 0 0;
     font-size: 0.9em;
     color: #666;
     word-wrap: break-word;
@@ -252,6 +257,7 @@ a.post-link:hover p {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+
 }
 
 .foodplan-body {
@@ -262,16 +268,19 @@ a.post-link:hover p {
 
 .image-container {
     display: flex;
-    justify-content: center;
+
     width: 100%;
+    margin-left:230px;
+    margin-right:230px;
+
 }
 
 .centered-image {
     max-width: 100%;
     height: auto;
     display: block;
-    width: 1440px;  /* Фиксированная ширина */
-    height: 702px;
+    width: 1310px;  /* Фиксированная ширина */
+    height: 650px;
 }
 
 .description-text {
@@ -280,8 +289,8 @@ a.post-link:hover p {
     color: #333; /* Цвет текста */
     text-align: left; /* Выровнять по левому краю */
 }
-.table-margin-foodplan{
 
+.table-margin-foodplan{
     margin-left: 230px;
     margin-right: 230px;
 }
@@ -294,6 +303,8 @@ a.post-link:hover p {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-left: 230px;
     margin-right: 230px;
+    border-color: black;
+
 
 }
 
@@ -353,4 +364,35 @@ a.post-link:hover p {
     background-image: url('../images/dish.svg'); /* URL of the small plate icon */
     background-size: contain; /* Adjusted background size */
     margin-right: 0px; /* Adjust as needed */
+}
+
+
+.weight-div{
+
+    margin-top: 80px;
+    margin-left: 20px;
+    font-size: 15px;
+    font-family: "Lucida Handwriting", cursive;
+
+}
+
+.nutrient-ul {
+    padding: 0; /* Remove default padding */
+    list-style-type: none;
+}
+
+.nutrient-li {
+    margin: 15px;
+    display: flex; /* Use flexbox */
+    align-items: center; /* Vertically center items */
+}
+
+.nutrient-logo {
+    margin-right: 10px;
+    width: 20px;
+    height: 30px;
+}
+
+.dish-content{
+    padding: 15px;
 }

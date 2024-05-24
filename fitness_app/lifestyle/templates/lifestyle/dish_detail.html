@@ -2,13 +2,44 @@
 {%load lifestyle_tags%}
 
 {% block content %}
-<h1>{{dish.name}}</h1>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dish.name</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <table class="table-margin">
+    <tr>
+        <td style="text-align: center;">
+            {% if dish.photo %}
+            <p><img class="img-article-left" class="img-article-left" src="{{dish.photo.url}}"></p>
+            {% else %}
+            <p style="aligh-items: center"><img class="img-article-left" class="img-article-left" src="{{default_photo_dish}}"></p>
+            {% endif %}
+        </td>
+        <td style="padding: 0 150px 0 0">
+            <ul class="nutrient-ul">
+                <li class="nutrient-li"><img src="/media/photos/nutrients/fats.png" class="nutrient-logo">
+                    fats {{dish.fats}} g.</li>
+                <li class="nutrient-li"><img src="/media/photos/nutrients/carbs.png" class="nutrient-logo">carbs {{dish.carbs}} g.</li>
+                <li class="nutrient-li"><img src="/media/photos/nutrients/proteins.png" class="nutrient-logo">proteins {{dish.proteins}} g.</li>
+            </ul>
+                <div class="weight-div">weight {{dish.weight}} g.</div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <h2 style="text-align: center">{{dish.name}}</h2>
+            <div style="margin:15px;">{{dish.content| safe}}</div>
+        </td>
+    </tr>
+</table>
 
-{% if dish.photo %}
-<p><img class="img-article-left" class="img-article-left" src="{{dish.photo.url}}"></p>
-{%else%}
-<p><img class="img-article-left" class="img-article-left" src="{{default_photo_dish}}"></p>
-{% endif %}
-{{dish.content|linebreaks}}
+</body>
+</html>
 
 {% endblock %}
+

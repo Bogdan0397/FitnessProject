@@ -1,6 +1,6 @@
 from django import forms
 
-from lifestyle.models import FoodPlans, Supplements, Supplement_Cat
+from lifestyle.models import FoodPlans, Supplements, Supplement_Cat, Meals
 
 
 class FoodPlanAdminForm(forms.ModelForm):
@@ -15,7 +15,7 @@ class SupplementsAdminForm(forms.ModelForm):
 
     class Meta:
         model = Supplements
-        fields = ['name', 'slug', 'photo', 'content']
+        fields = ['name', 'slug', 'photo', 'content','description','category']
         widgets = {
             'content': forms.Textarea(attrs={'class': 'form-input', 'cols': 60, 'rows': 10})
         }
@@ -27,4 +27,15 @@ class SupplementsCatsAdminForm(forms.ModelForm):
         fields = ['name', 'slug', 'description']
         widgets = {
             'description': forms.Textarea(attrs={'class': 'form-input', 'cols': 60, 'rows': 10})
+        }
+
+
+
+class MealsAdminForm(forms.ModelForm):
+
+    class Meta:
+        model = Meals
+        fields = ['name', 'slug', 'photo', 'content','description','calories','weight','carbs','fats','proteins']
+        widgets = {
+            'content': forms.Textarea(attrs={'class': 'form-input', 'cols': 60, 'rows': 10})
         }

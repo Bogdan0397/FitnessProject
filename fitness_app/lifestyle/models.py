@@ -31,8 +31,12 @@ class Meals(models.Model):
     calories = models.IntegerField(null=True)
     weight = models.IntegerField(null=True)
     description = models.CharField(max_length=1500, blank=True)
+    proteins = models.IntegerField(default=0)
+    fats = models.IntegerField(default=0)
+    carbs = models.IntegerField(default=0)
     def get_absolute_url(self):
         return reverse('dish',kwargs={'dish_slug': self.slug})
+
 
 
 class Day(models.Model):
@@ -47,7 +51,8 @@ class Day(models.Model):
 class Supplements(models.Model):
     name = models.CharField(max_length=50)
     slug = models.SlugField(max_length=100, unique=True, db_index=True)
-    content = models.CharField(max_length=100, blank=True)
+    description = models.CharField(max_length=250,null=True)
+    content = models.CharField(max_length=1500, blank=True)
     photo = models.ImageField(upload_to='photos/supplement_photos', default=None, null=True, blank=True,
                               verbose_name='Photo_Supp')
     category = models.ForeignKey('Supplement_Cat', on_delete=models.SET_NULL, null=True, blank=True, related_name='supp_cat',

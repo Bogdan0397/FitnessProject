@@ -15,7 +15,8 @@
         {% endif %}
         <div class="post-content">
             <h3>{{ post.name }}</h3>
-            <p>{{ post.content|truncatechars:60 }}</p>
+            <p class="category-supp">{{post.category}}</p>
+            <p class ="description-supp">{{ post.description|truncatechars:100 }}</p>
         </div>
     </div>
 </a>
