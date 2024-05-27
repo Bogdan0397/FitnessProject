@@ -1,4 +1,3 @@
-<!-- foodplans_home.html: This template extends the base and fills the content block -->
 {% extends "base.html" %}
 {% load lifestyle_tags %}
 {% block title %}FoodPlan{% endblock %}
@@ -8,9 +7,13 @@
 {% block content %}
 <div class="image-container">
     {% if foodplan.photo %}
-    <img class="centered-image" src="{{ foodplan.photo.url }}" alt="Food Plan Image">
+    <img class="centered-image" src="{{ foodplan.photo.url }}" alt="Food Plan Image"
+         sizes="(min-width: 1280px) 1280px, (max-width: 1279px) 80vw, (max-width: 768px) calc(100vw - 2rem)"
+         width="1920" height="1080">
     {% else %}
-    <img class="centered-image" src="{{ default_photo_foodplan }}" alt="Default Food Plan Image">
+    <img class="centered-image" src="{{ default_photo_foodplan }}" alt="Default Food Plan Image"
+         sizes="(min-width: 1280px) 1280px, (max-width: 1279px) 80vw, (max-width: 768px) calc(100vw - 2rem)"
+         width="1920" height="1080">
     {% endif %}
 </div>
 <table class="table-margin-foodplan">
