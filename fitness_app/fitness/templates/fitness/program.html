@@ -1,15 +1,28 @@
-<!-- foodplans_home.html: This template extends the base and fills the content block -->
 {% extends "base.html" %}
 {%load fitness_tags%}
 {% block title %}FoodPlan{% endblock %}
 
+{% block body_class %}foodplan-body{% endblock %}
+
 {% block content %}
-<h3>{{program.name}}</h3>
-{%if program.photo%}
-<p><img class="img-article-left" class="img-article-left" src="{{program.photo.url}}"></p>
-{%else%}
-<p><img class="img-article-left" class="img-article-left" src="{{default_program_photo}}"></p>
-{%endif%}
-<p>{{program.description}}</p>
+<div class="image-container">
+    {% if program.photo %}
+    <img class="centered-image" src="{{ program.photo.url }}" alt="Program Image"
+         sizes="(min-width: 1280px) 1280px, (max-width: 1279px) 80vw, (max-width: 768px) calc(100vw - 2rem)"
+         width="1920" height="1080">
+    {% else %}
+    <img class="centered-image" src="{{ default_program_photo }}" alt="Default Program Image"
+         sizes="(min-width: 1280px) 1280px, (max-width: 1279px) 80vw, (max-width: 768px) calc(100vw - 2rem)"
+         width="1920" height="1080">
+    {% endif %}
+</div>
+<table class="table-margin-foodplan">
+    <tr>
+        <td style="vertical-align: top;">
+            <h2>{{program.name}}</h2>
+            <p class="description-text">{{ program.description }}</p>
+        </td>
+    </tr>
+</table>
 {% programs_home program.slug %}
 {% endblock %}

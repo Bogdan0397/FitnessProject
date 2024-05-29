@@ -22,6 +22,25 @@ class Exercises(models.Model):
     content = models.CharField(max_length=100, blank=True)
     photo = models.ImageField(upload_to='photos/exercises', default=None, null=True, blank=True,
                               verbose_name='Photo_Exercise')
+    repetitions = models.IntegerField(default=0)
+    times = models.IntegerField(default=0)
+    video_link = models.URLField(max_length=200,null=True)
+
+    def save(self, *args, **kwargs):
+        if self.video_link:
+            # Извлечение идентификатора видео из ссылки на YouTube
+            start_index = self.video_link.find('=') + 1
+            end_index = self.video_link.find('&')
+            if end_index == -1:
+                end_index = None
+            video_id = self.video_link[start_index:end_index]
+
+            # Сохранение идентификатора видео в поле
+            self.video_link = video_id
+
+        super().save(*args, **kwargs)
+
+
     def get_absolute_url(self):
         return reverse('exercise',kwargs={'exercise_slug': self.slug})
 

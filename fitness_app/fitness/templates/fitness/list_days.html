@@ -1,13 +1,42 @@
-{%for day in days%}
-<div class="post-tile">
-    <h3>{{ day.name }}</h3>
-    <ul>
-        {%for exercise in day.exercises.all%}
-            <li>
-                <a href="{{ exercise.get_absolute_url }}">{{exercise.name}}</a>
-                <p>{{exercise.content}}</p>
-            </li>
-        {%endfor%}
-    </ul>
-</div>
-{%endfor%}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список упражнений</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    {% for day in days %}
+    <table class="table-margin">
+        <tr>
+            <td>
+                <h3 class="h3-exercise">{{ day.name }}</h3>
+                <ul class="meal-list">
+                    {% for exercise in day.exercises.all %}
+                    <li class="meal-item">
+                        <a href="{{ exercise.get_absolute_url }}" class="meal-link">
+                            <div class="exercise-image"></div>
+                            <div class="meal-content">
+                                <p class="exercise-name">{{ exercise.name }}</p>
+                                <p class="meal-description">{{ exercise.content }}</p>
+                                <p class="meal-calories">{{ exercise.repetitions }} reps in 1 time</p>
+                                <p class="meal-weight">{{ exercise.times }} times</p>
+                                {%if exercise.video_link %}
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/{{exercise.video_link}}"
+                                        frameborder="0" allowfullscreen></iframe>
+                                {%else%}
+                                <img src="/static/fitness/images/unavailable_vid.jpg">
+                                {%endif%}
+                            </div>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </td>
+
+        </tr>
+    </table>
+    {% endfor %}
+</body>
+</html>
