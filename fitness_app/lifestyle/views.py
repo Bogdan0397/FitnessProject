@@ -11,7 +11,11 @@ from .utils import DataMixin
 
 # Create your views here.
 def lifestylehome(request):
-    return render(request,'lifestyle/lifestyle_home.html',context={'selected_menu':'Life Style'})
+
+    q1 = FoodPlans.objects.all()
+    q2 = Supplements.objects.all()
+    return render(request,'lifestyle/lifestyle_home.html',context={'selected_menu':'Life Style',
+                                                                   'foodplans':q1,'supplements':q2})
 class FoodPlansHome(DataMixin,ListView):
     template_name = 'lifestyle/foodplans_home.html'
     context_object_name = 'foodplans'

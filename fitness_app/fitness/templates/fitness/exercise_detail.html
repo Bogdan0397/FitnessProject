@@ -2,34 +2,20 @@
 {%load fitness_tags%}
 
 {% block content %}
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>exercise.name</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <table class="table-margin">
-    <tr>
-        <td style="text-align: center;">
-            {% if exercise.photo %}
-            <p><img class="img-article-left" class="img-article-left" src="{{exercises.photo.url}}"></p>
-            {% else %}
-            <p style="aligh-items: center"><img class="img-article-left" class="img-article-left" src="{{default_exercise_image}}"></p>
-            {% endif %}
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2">
-            <h2 style="text-align: center">{{exercise.name}}</h2>
-            <div style="margin:15px;">{{exercise.content| safe}}</div>
-        </td>
-    </tr>
-</table>
-
-</body>
-</html>
+<h1>{{exercise.name}}</h1>
+{% if exercise.photo %}
+<p><img class="img-article-left" class="img-article-left" src="{{exercises.photo.url}}"></p>
+{%else%}
+<p><img class="img-article-left" class="img-article-left" src="{{default_exercise_image}}"></p>
+{% endif %}
+{{exercise.content|linebreaks}}
+<div>
+    {%if exercise.video_link %}
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{exercise.video_link}}"
+            frameborder="0" allowfullscreen></iframe>
+    {%else%}
+    <img src="/static/fitness/images/unavailable_vid.jpg">
+    {%endif%}
+</div>
 
 {% endblock %}

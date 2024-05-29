@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #d7dae0;
     margin: 0;
+    -webkit-font-smoothing: antialiased;
 }
 
 body-title {
@@ -163,7 +164,7 @@ header nav ul.menu li.menu-selected:hover .dropdown-content a::after {
 }
 
 .post-image {
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 180px;
@@ -328,6 +329,13 @@ CSS
     text-align: center;
 }
 
+.h3-exercise {
+    background-color: #5F9EA0;
+    color: white;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+}
 .meal-list {
     list-style: none;
     padding: 0;
@@ -370,10 +378,25 @@ CSS
     color: #30821e;
     font-weight: bold;
 }
+
+.exercise-name {
+    margin-left: 5px;
+    font-size: 18px;
+    color: #5F9EA0;
+    font-weight: bold;
+}
 .meal-image {
     width: 50px; /* Adjusted width */
     height: 50px; /* Adjusted height */
     background-image: url('../images/dish.svg'); /* URL of the small plate icon */
+    background-size: contain; /* Adjusted background size */
+    margin-right: 0px; /* Adjust as needed */
+}
+
+.exercise-image {
+    width: 50px; /* Adjusted width */
+    height: 48px; /* Adjusted height */
+    background-image: url('../images/exercise.svg'); /* URL of the small plate icon */
     background-size: contain; /* Adjusted background size */
     margin-right: 0px; /* Adjust as needed */
 }
@@ -409,4 +432,41 @@ CSS
     padding: 15px;
 }
 
+.container-text{
+    color: #fff;
+}
+.masthead.image-masthead {
+    background-color: #222533;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 550px;
+    color: #fff;
+    background-image: url('../images/lifestyle_home.jpg');
+}
+
+.masthead.image-masthead .container {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.masthead.image-masthead .masthead-text {
+    max-width: 55%;
+}
+
+.masthead.image-masthead .masthead-text .heading.-huge {
+    letter-spacing: -0.02em;
+    margin-left: -3px;
+}
+
+.masthead.image-masthead p {
+    line-height: 1.625em;
+    padding: 0px 30px 0px 0px;
+    margin: -9px 0px 0px 0px;
+}
 

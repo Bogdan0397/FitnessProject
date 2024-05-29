@@ -37,7 +37,6 @@ class Program(FitnessMixin,DetailView):
     template_name = 'fitness/program.html'
     slug_url_kwarg = 'program_slug'
     context_object_name = 'program'
-    extra_context = {'default_program_photo': settings.DEFAULT_PROGRAM_IMAGE}
     def get_object(self):
         return get_object_or_404(Programs,slug=self.kwargs[self.slug_url_kwarg])
 
