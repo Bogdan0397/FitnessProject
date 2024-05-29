@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86079984-a8f8-4cc2-aedc-ce19ada93fa5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/fitness_app/fitness/static/fitness/images/home1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitness_app/fitness/templates/fitness/deteil_old.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fitness_app/fitness/static/fitness/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/static/fitness/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/static/fitness/js/dropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/static/fitness/js/dropdown.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/templates/fitness/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/templates/fitness/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/templates/fitness/workout_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/templates/fitness/workout_home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/fitness_app/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness_app/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/templates/fitness/exercise_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/templates/fitness/exercise_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/templates/fitness/program.html" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/templates/fitness/program.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,17 +46,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Yaryk1488/Desktop/FitnessProject/fitness_app/fitness/static/fitness/images",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "two.files.diff.last.used.folder": "C:/Users/Yaryk1488/Desktop/FitnessProject/fitness_app/lifestyle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Yaryk1488/Desktop/FitnessProject/fitness_app/fitness/static/fitness/images&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;two.files.diff.last.used.folder&quot;: &quot;C:/Users/Yaryk1488/Desktop/FitnessProject/fitness_app/lifestyle&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Yaryk1488\Desktop\FitnessProject\fitness_app\fitness\static\fitness\images" />
@@ -167,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715590608001</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="common settings">
+      <created>1716293070291</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1716293070291</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
