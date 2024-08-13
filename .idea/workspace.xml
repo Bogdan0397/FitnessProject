@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86079984-a8f8-4cc2-aedc-ce19ada93fa5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/fitness_app/fitness/templates/fitness/deteil_old.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/static/fitness/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/static/fitness/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/templates/fitness/exercise_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/templates/fitness/exercise_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/templates/fitness/program.html" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/templates/fitness/program.html" afterDir="false" />
-    </list>
+    <list default="true" id="86079984-a8f8-4cc2-aedc-ce19ada93fa5" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
