@@ -13,14 +13,18 @@
 <body>
     <table class="table-margin">
     <tr>
-        <td style="text-align: center;">
+        <td>
             {% if dish.photo %}
-            <p><img class="img-article-left" class="img-article-left" src="{{dish.photo.url}}"></p>
-            {% else %}
-            <p style="aligh-items: center"><img class="img-article-left" class="img-article-left" src="{{default_photo_dish}}"></p>
-            {% endif %}
+                <div class="img-container">
+                    <img class="img-article-left" src="{{ dish.photo.url }}">
+                </div>
+                {% else %}
+                <div class="img-container">
+                    <img class="img-article-left" src="{{ default_photo_dish }}">
+                </div>
+                {% endif %}
         </td>
-        <td style="padding: 0 150px 0 0">
+        <td style="padding: 0 200px 0 10px">
             <ul class="nutrient-ul">
                 <li class="nutrient-li"><img src="/media/photos/nutrients/fats.png" class="nutrient-logo">
                     fats {{dish.fats}} g.</li>

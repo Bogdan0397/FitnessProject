@@ -264,11 +264,22 @@ a.post-link:hover p {
     overflow: hidden;
 }
 
-.header-image, .img-article-left {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+.img-container {
+    position: relative;
+    width: 100%; /* или фиксированный размер, например 300px */
+    height: auto; /* или фиксированный размер, например 300px */
+    top: 0;
+    left: 0;
+    right: 0;
 
+}
+.header-image, .img-article-left {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%; /* Изображение занимает 100% ширины контейнера */
+    height: 100%; /* Изображение занимает 100% высоты контейнера */
+    object-fit: contain; /* Сохранение пропорций изображения внутри контейнера */
 }
 
 .foodplan-body {
