@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{%load lifestyle_tags%}
+{% block title %}Life Style{% endblock %}
+
+
+{% block content %}
+<section>
+<div class="div-block">
+{% for post in programs %}
+<a href="{{ post.get_absolute_url }}" class="post-link">
+    <div class="post-tile">
+        {% if post.photo %}
+        <div class="post-image" style="background-image: url('{{ post.photo.url }}');"></div>
+        {% else %}
+        <div class="post-image" style="background-image: url('{{ default_program_photo }}');"></div>
+        {% endif %}
+        <div class="post-content">
+            <h3>{{ post.name }}</h3>
+            <p>{{ post.description|truncatechars:60 }}</p>
+        </div>
+    </div>
+</a>
+{% endfor %}
+</div>
+</section>
+{% endblock %}

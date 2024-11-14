@@ -38,3 +38,66 @@ services:
       PGADMIN_DEFAULT_PASSWORD: rampage12341
     ports:
       - "5050:80"
+
+  redis:
+    image: redis:7.0.5-alpine
+    hostname: redis
+    ports:
+      - "6379:6379"
+
+  worker:
+    build:
+      context: .
+    hostname: worker
+    entrypoint: celery
+    command: -A celery_app.app worker --loglevel=info
+    volumes:
+      - ./fitness_app:/fitness_app
+    links:
+      - redis
+    depends_on:
+      - redis
+      - database
+
+    environment:
+      - DB_HOST=database
+      - DB_NAME=dbname
+      - DB_USER=dbuser
+      - DB_PASSWORD=pass
+
+
+  worker2:
+    build:
+      context: .
+    hostname: worker2
+    entrypoint: celery
+    command: -A celery_app.app worker --loglevel=info
+    volumes:
+      - ./fitness_app:/fitness_app
+    links:
+      - redis
+    depends_on:
+      - redis
+      - database
+
+    environment:
+      - DB_HOST=database
+      - DB_NAME=dbname
+      - DB_USER=dbuser
+      - DB_PASSWORD=pass
+
+  flower:
+    build:
+      context: .
+    hostname: flower
+    entrypoint: celery
+    command: -A celery_app.app flower --loglevel=info
+    volumes:
+      - ./fitness_app:/fitness_app
+    links:
+      - redis
+    depends_on:
+      - redis
+    ports:
+      - "5555:5555"
+

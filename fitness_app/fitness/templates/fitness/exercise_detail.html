@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{%load fitness_tags%}
+
+{% block content %}
+<h1>{{exercise.name}}</h1>
+{% if exercise.photo %}
+<p><img class="img-article-left" class="img-article-left" src="{{exercises.photo.url}}"></p>
+{%else%}
+<p><img class="img-article-left" class="img-article-left" src="{{default_exercise_image}}"></p>
+{% endif %}
+{{exercise.content|linebreaks}}
+<div>
+    {%if exercise.video_link %}
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{exercise.video_link}}"
+            frameborder="0" allowfullscreen></iframe>
+    {%else%}
+    <img src="/static/fitness/images/unavailable_vid.jpg">
+    {%endif%}
+</div>
+
+{% endblock %}

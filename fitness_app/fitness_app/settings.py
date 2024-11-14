@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+AUTH_USER_MODEL = 'user.User'
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,8 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'fitness',
+    'user.apps.UserConfig',
+    'fitness.apps.FitnessConfig',
+    'lifestyle.apps.LifestyleConfig',
     'cachalot',
+
+
 ]
 
 MIDDLEWARE = [
@@ -57,7 +61,9 @@ ROOT_URLCONF = 'fitness_app.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates',
+                  ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -65,6 +71,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'fitness.context_processors.get_context_menu',
             ],
         },
     },
@@ -121,7 +128,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR /'fitness'/'static',]  # Путь к общей папке статических файлов
+
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -148,10 +159,17 @@ LOGGING = {
     }
 }
 
-# CACHES = {
-#     "default": {
-#         "BACKEND": "django_redis.cache.RedisCache",
-#         "LOCATION": "redis://redis:6379/1",
-#     }
-# }
+CELERY_BROKER_URL = 'redis://redis:6379/0'
 
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://redis:6379/1",
+    }
+}
+DEFAULT_DISH_IMAGE = MEDIA_URL + 'photos/dish_photos/default.jpg'
+DEFAULT_SUPP_IMAGE = MEDIA_URL + 'photos/supplement_photos/default.jpg'
+DEFAULT_FOODPLAN_IMAGE = MEDIA_URL + 'photos/foodplans/default.png'
+DEFAULT_PROGRAM_IMAGE = MEDIA_URL + 'photos/programs/programma-trenirovok-dlja-muzhchin-v-zale.jpg'
+DEFAULT_EXRCISE_IMAGE = MEDIA_URL + 'photos/exercises/default_exercise_image.jpg'
+HOME_IMG1 = MEDIA_URL + 'photos/dish_photos/default.jpg'

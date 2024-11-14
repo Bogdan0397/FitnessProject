@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Fitness Site</title>
+    <link rel="stylesheet" href="{% static 'fitness/css/styles.css' %}">
+    <link rel="icon" href="{% static 'fitness/images/favicon.ico' %}">
+</head>
+<body class="{% block body_class %}{% endblock %}">
+    <header>
+        <nav class="main-nav" id="main-nav">
+            <ul class="menu" id="menu">
+                <a href="{% url 'home' %}"><section class="logo" id="logo"></section></a>
+                {% for index in mainmenu %}
+                <li class="dropdown {% if index.title == selected_menu %}menu-selected selected{% endif %}">
+                    <a href="{% url index.url_name %}"> {{ index.title }}</a>
+                    <div class="dropdown-content">
+                        {% for subcategory in index.subcategories %}
+                        <a href="{% url subcategory.url_name %}">{{ subcategory.title }}</a>
+                        {% endfor %}
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        {% block content %}
+        <div class="image-container">
+            <div class="logo"></div>
+            <img src="{% static 'fitness/images/your-image.png' %}" alt="Strength Training Food" class="centered-image">
+        </div>
+        {% endblock %}
+    </div>
+
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+
+    <script src="{% static 'fitness/js/dropdown.js' %}"></script>
+    <script src="{% static 'fitness/js/hiden-menu.js' %}"></script>
+</body>
+</html>

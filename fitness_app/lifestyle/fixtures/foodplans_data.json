@@ -1,0 +1,32 @@
+[
+{
+  "model": "lifestyle.foodplans",
+  "pk": 2,
+  "fields": {
+    "name": "testplan2",
+    "slug": "testplan2",
+    "description": "Good nutrition should taste great and make you feel even better! \r\n\r\nHowever, when it comes to planning and preparing healthy meals and snacks, it can sometimes seem overwhelming, so having a bit of structure and guidance may be just what you need. With this in mind, we worked with registered dieticians to create the Fitness Blender Meal Plan, which highlights great-tasting, healthy, whole-foods meals and snacks - giving you everything you need to make some real headway in learning how to fuel your body better. The plan details 3 meals and 3 snacks - every day - for four weeks.\r\n\r\nWant a sample? Check out a few of the meals to try before you buy.\r\n\r\nUPDATE: For your convenience, we have updated this program to also be available in an instantly downloadable PDF (as well as in online format).\r\n\r\nThere is a corresponding grocery list for each week, and there are 5 different calorie allotments to choose from so that you can customize this plan to meet your exact goals (weight loss, gain, or maintenance). Includes suggestions for modifying for food allergies, intolerance, and availability, as well as food costs, cooking for a family, and more. Couple this 4 Week Meal Plan with our Workout Programs for best results.\r\n\r\nMost meals are quick and easy to put together, with simple, straight forward recipes that are easily modifiable to the users taste. Meal plan also includes our nutrition guide (found on Day 0)",
+    "photo": "photos/foodplans/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg"
+  }
+},
+{
+  "model": "lifestyle.foodplans",
+  "pk": 3,
+  "fields": {
+    "name": "testplan3",
+    "slug": "testplan3",
+    "description": "1234568991012345689910123456899101234568991012345689910",
+    "photo": "photos/foodplans/7739-strength-building-meal-plan-9d87.jpg"
+  }
+},
+{
+  "model": "lifestyle.foodplans",
+  "pk": 4,
+  "fields": {
+    "name": "What to Eat While Strength Training",
+    "slug": "strength_training_food",
+    "description": "Recipes to Refuel and Recover after Strength Workouts",
+    "photo": "photos/foodplans/10178-what-to-eat-while-strength-training-88a3.jpg"
+  }
+}
+]
