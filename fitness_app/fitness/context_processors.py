@@ -1,7 +1,3 @@
-
-
-
-
 menu = [{'title': "About", 'url_name': 'about',
         'subcategories': [{'title':'Our Team','url_name':'our_team'},{'title':'Contact','url_name':'contact'}]},
         {'title':"Life Style",'url_name':'lifestyle_home',
