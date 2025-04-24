@@ -1,6 +1,6 @@
 FROM python:3.9-alpine3.19
 
-COPY requirements.txt /temp/requirements.txt
+COPY fitness_app/requirements.txt /temp/requirements.txt
 COPY fitness_app /fitness_app
 WORKDIR /fitness_app
 EXPOSE 8000
