@@ -37,13 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'user.apps.UserConfig',
     'fitness.apps.FitnessConfig',
     'lifestyle.apps.LifestyleConfig',
     'cachalot',
-
-
 ]
 
 MIDDLEWARE = [
@@ -173,3 +170,6 @@ DEFAULT_FOODPLAN_IMAGE = MEDIA_URL + 'photos/foodplans/default.png'
 DEFAULT_PROGRAM_IMAGE = MEDIA_URL + 'photos/programs/programma-trenirovok-dlja-muzhchin-v-zale.jpg'
 DEFAULT_EXRCISE_IMAGE = MEDIA_URL + 'photos/exercises/default_exercise_image.jpg'
 HOME_IMG1 = MEDIA_URL + 'photos/dish_photos/default.jpg'
+
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
