@@ -1,26 +1,36 @@
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login, logout, get_user_model
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.views import LoginView
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
+from django.views.generic import CreateView, UpdateView
 
-from user.forms import LoginUserForm
+from user.forms import LoginUserForm, RegisterUserForm, ProfileUserForm
 
 
-def login_user(request):
-    if request.method == "POST":
-        form = LoginUserForm(request.POST)
-        if form.is_valid():
-            cd = form.cleaned_data
-            user = authenticate(request, username = cd['username'] ,
-                                password = cd['password'])
-            if user and user.is_active:
-                login(request, user)
-                return HttpResponseRedirect(reverse('home'))
-    else:
-        form = LoginUserForm()
+class LoginUser(LoginView):
+    form_class = LoginUserForm
+    template_name = 'user/login.html'
 
-    return render(request,'user/login.html',{"form":form})
+class RegisterUser(CreateView):
+    form_class = RegisterUserForm
+    template_name = 'user/register.html'
+    success_url = reverse_lazy('user:login')
 
-def logout_user(request):
-    logout(request)
-    return HttpResponseRedirect(reverse('user:login'))
+
+
+
+class ProfileUser(LoginRequiredMixin, UpdateView):
+    model = get_user_model()
+    form_class = ProfileUserForm
+    template_name = 'user/profile.html'
+
+    def get_success_url(self):
+        return reverse_lazy('user:profile')
+
+    def get_object(self, queryset=None):
+        return self.request.user
+
+

@@ -11,8 +11,8 @@
 <body class="{% block body_class %}{% endblock %}">
     <header>
         <nav class="main-nav" id="main-nav">
+            <a href="{% url 'home' %}"><section class="logo" id="logo"></section></a>
             <ul class="menu" id="menu">
-                <a href="{% url 'home' %}"><section class="logo" id="logo"></section></a>
                 {% for index in mainmenu %}
                 <li class="dropdown {% if index.title == selected_menu %}menu-selected selected{% endif %}">
                     <a href="{% url index.url_name %}"> {{ index.title }}</a>
@@ -24,6 +24,16 @@
                 </li>
                 {% endfor %}
             </ul>
+            {% if user.is_authenticated %}
+            <div class="login-link">
+                <a href="{% url 'user:profile' %}" class="profile-link">{{user.username}}</a> |
+                <a href="{% url 'user:logout' %}" class="logout-link">Logout</a>
+            </div>
+            {% else %}
+            <div class="login-link">
+                <a href="{% url 'user:login' %}">Login</a>
+            </div>
+            {% endif %}
         </nav>
     </header>
 

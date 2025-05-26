@@ -14,10 +14,13 @@ body-title {
 header nav {
     position: relative;
     background-color: white;
-    padding: 10px 0;
-    display: grid;
-    width: 100%;
-    height: 50px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    box-sizing: border-box;
+
 }
 
 
@@ -488,3 +491,211 @@ a.post-link:hover p {
     font-size: 24px;
 
 }
+.login-link a {
+display: inline-block;
+font-weight: bold;
+text-decoration: none;
+padding: 10px 20px;
+color: white;
+background-color: black; /* повністю чорний фон */
+border: none;
+border-radius: 4px;
+transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-link a:hover {
+background-color: #333; /* трохи світліший чорний при наведенні */
+transform: translateY(-2px);
+text-decoration: none;
+color: white;
+}
+
+.login-link a:active {
+transform: translateY(0);
+}
+
+
+/* шаблон login */
+
+.login-form {
+background-color: #ffffff;
+max-width: 400px;
+margin: 50px auto;
+padding: 30px 40px;
+border-radius: 10px;
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+font-family: Arial, sans-serif;
+}
+
+.login-form .form-group {
+margin-bottom: 20px;
+}
+
+.login-form .form-label {
+display: block;
+font-weight: bold;
+margin-bottom: 5px;
+color: #2C3E50;
+}
+
+.login-form input {
+width: 100%;
+padding: 10px 12px;
+font-size: 14px;
+border: 1px solid #ccc;
+border-radius: 6px;
+box-sizing: border-box;
+}
+
+.login-form .form-error {
+color: red;
+font-size: 12px;
+margin-top: 5px;
+}
+
+.login-form .login-button {
+background-color: #000;
+color: #fff;
+padding: 12px 20px;
+border: none;
+border-radius: 6px;
+font-weight: bold;
+font-size: 15px;
+cursor: pointer;
+width: 100%;
+transition: background-color 0.3s ease;
+}
+
+.login-form .login-button:hover {
+background-color: #333;
+}
+
+/*sign up */
+
+.signup-link a {
+color: black;
+text-decoration: none;
+font-weight: bold;
+padding: 8px 12px;
+background-color: white;
+display: inline-block;
+border-radius: 4px;
+transition: background-color 0.3s;
+}
+
+.signup-link a:hover {
+background-color: #f0f0f0;
+}
+
+.signup-container {
+text-align: center;
+margin-top: 15px;
+}
+
+.signup-link {
+color: black;
+text-decoration: none;
+font-weight: bold;
+background-color: white;
+padding: 8px 16px;
+border-radius: 4px;
+display: inline-block;
+transition: background-color 0.3s;
+}
+
+.signup-link:hover {
+background-color: #f0f0f0;
+}
+
+/* profile */
+
+a.profile-link {
+    color: black;
+    text-decoration: none;
+    font-weight: normal;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+a.profile-link:hover,
+a.profile-link:active,
+a.profile-link:focus {
+    color: black;
+    text-decoration: none;
+    background: none;
+    outline: none;
+}
+
+.profile-container {
+    background-color: #ffffff;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.profile-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #2C3E50;
+}
+
+.profile-form .form-group {
+    margin-bottom: 20px;
+}
+
+.profile-form .form-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #2C3E50;
+}
+
+.profile-form input,
+.profile-form select,
+.profile-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.profile-form .form-error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.save-button {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+    background-color: #333;
+}
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;  /* обрізає зайве, щоб заповнити розмір */
+    border-radius: 50%; /* якщо хочеш круглу аватарку */
+    border: 2px solid #ccc; /* тонка рамка — опційно */
+}
+
+
