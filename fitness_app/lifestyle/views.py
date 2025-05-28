@@ -1,12 +1,15 @@
 from django.conf import settings
-from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse_lazy
+from django.utils.decorators import method_decorator
 from django.views.generic import ListView, DetailView
 
 from .models import Day
 from .models import FoodPlans, Meals, Supplements
-from . import views
+from . import views, models
 from .utils import DataMixin
+from django.db.models import Q
 
 
 # Create your views here.
@@ -20,9 +23,14 @@ class FoodPlansHome(DataMixin,ListView):
     template_name = 'lifestyle/foodplans_home.html'
     context_object_name = 'foodplans'
     allow_empty = False
+
     def get_queryset(self):
-        self.qs = FoodPlans.objects.all()
-        return self.qs
+        query = self.request.GET.get('q')
+        if query:
+            return FoodPlans.objects.filter(
+                Q(name__icontains=query) | Q(description__icontains=query)
+            )
+        return FoodPlans.objects.all()
 
 
     def get_context_data(self,**kwargs):
@@ -44,6 +52,17 @@ class Foodplan(DataMixin,DetailView):
         default_photo_foodplan = settings.DEFAULT_FOODPLAN_IMAGE
 
         return self.get_mixin_context(context, default_photo_foodplan=default_photo_foodplan)
+
+    @method_decorator(login_required)
+    def post(self, request, *args, **kwargs):
+        program = self.get_object()
+        user = request.user
+
+        # Просто назначаем выбранную фитнес-программу
+        user.selected_nutrition_program = program
+        user.save()
+
+        return redirect('user:profile')
 
 
 class DishView(DataMixin,DetailView):

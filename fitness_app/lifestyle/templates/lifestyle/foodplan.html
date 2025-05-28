@@ -20,6 +20,12 @@
     <tr>
         <td style="vertical-align: top;">
             <h2>{{foodplan.name}}</h2>
+            {% if user.is_authenticated %}
+            <form method="post" class="check-foodpan-form">
+                {% csrf_token %}
+                <button type="submit" class="btn-check-foodplan">Check this program</button>
+            </form>
+            {% endif %}
             <p class="description-text">{{ foodplan.description }}</p>
         </td>
     </tr>

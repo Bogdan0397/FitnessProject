@@ -5,6 +5,12 @@
 
 {% block content %}
 <section>
+  <div class="search-wrapper">
+  <form method="get" action="{% url 'foodplans_home' %}" class="search-form">
+    <input type="text" name="q" placeholder="Search for a food plan..." value="{{ request.GET.q }}">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <div class="div-block">
 {% for post in foodplans %}
 <a href="{{ post.get_absolute_url }}" class="post-link">
@@ -23,4 +29,5 @@
 {% endfor %}
 </div>
 </section>
+</form>
 {% endblock %}

@@ -40,6 +40,9 @@ class Exercises(models.Model):
 
         super().save(*args, **kwargs)
 
+    def __str__(self):
+        return self.name
+
 
     def get_absolute_url(self):
         return reverse('exercise',kwargs={'exercise_slug': self.slug})

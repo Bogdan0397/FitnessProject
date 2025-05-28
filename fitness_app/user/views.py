@@ -33,4 +33,9 @@ class ProfileUser(LoginRequiredMixin, UpdateView):
     def get_object(self, queryset=None):
         return self.request.user
 
-
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        user = self.request.user
+        context['nutrition_program'] = user.selected_nutrition_program
+        context['fitness_program'] = user.selected_fitness_program
+        return context

@@ -1,29 +1,48 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="profile-container">
-    <h1 class="profile-title">Profile</h1>
-    <form method="post" class="profile-form" enctype="multipart/form-data">
-        {% csrf_token %}
+<div class="profile-wrapper">
+    <div class="profile-container">
+        <h1 class="profile-title">Profile</h1>
+        <form method="post" class="profile-form" enctype="multipart/form-data">
+            {% csrf_token %}
 
-        {% if user.photo %}
-            <p><img src="{{ user.photo.url }}" class="profile-photo"></p>
-        {% else %}
-            <p><img src="/media/users/default.png" class="profile-photo"></p>
+            {% if user.photo %}
+                <p><img src="{{ user.photo.url }}" class="profile-photo"></p>
+            {% else %}
+                <p><img src="/media/users/default.png" class="profile-photo"></p>
+            {% endif %}
+
+            <div class="form-error">{{ form.non_field_errors }}</div>
+
+            {% for f in form %}
+                {% if "_clear" not in f.name %}
+                    <div class="form-group">
+                        <label class="form-label" for="{{ f.id_for_label }}">{{ f.label }}</label>
+                        {{ f }}
+                        <div class="form-error">{{ f.errors }}</div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+
+            <button type="submit" class="save-button">Зберегти</button>
+        </form>
+    </div>
+
+    <div class="programs-panel">
+        {% if nutrition_program %}
+        <a href="{% url 'foodplan' nutrition_program.slug %}" class="program-box nutrition-box">
+            <h3>{{ nutrition_program.title }}</h3>
+            <p>View Nutrition Plan</p>
+        </a>
         {% endif %}
 
-        <div class="form-error">{{ form.non_field_errors }}</div>
-
-        {% for f in form %}
-            {% if "_clear" not in f.name %}
-                <div class="form-group">
-                    <label class="form-label" for="{{ f.id_for_label }}">{{ f.label }}</label>
-                    {{ f }}
-                    <div class="form-error">{{ f.errors }}</div>
-                </div>
-            {% endif %}
-        {% endfor %}
-
-        <button type="submit" class="save-button">Зберегти</button>
-    </form>
+        {% if fitness_program %}
+        <a href="{% url 'program' fitness_program.slug %}" class="program-box fitness-box">
+            <h3>{{ fitness_program.title }}</h3>
+            <p>View Fitness Plan</p>
+        </a>
+        {% endif %}
+    </div>
 </div>
 {% endblock %}
+

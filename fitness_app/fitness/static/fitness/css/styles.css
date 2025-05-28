@@ -699,3 +699,230 @@ a.profile-link:focus {
 }
 
 
+/* sss */
+
+/* Контейнер общего блока */
+.profile-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Левая часть: форма профиля */
+.profile-container {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+/* Правая часть: боковая панель программ */
+.programs-panel {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Карточка программы */
+.program-box {
+    background-color: #f5f7fa;
+    border-left: 6px solid #4caf50;
+    border-radius: 10px;
+    padding: 20px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.program-box:hover {
+    background-color: #e8f5e9;
+    transform: translateY(-2px);
+}
+
+/* Индивидуальные цвета для разных программ */
+.nutrition-box {
+    margin-top: 50px;
+    border-color: #ff9800;
+}
+.fitness-box {
+    border-color: #2196f3;
+}
+
+/* Заголовки */
+.program-box h3 {
+    margin: 0 0 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* Метки и поля формы */
+.form-label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/*search */
+
+.search-wrapper {
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.search-form {
+    width: 80%;
+    max-width: 960px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-form input[type="text"] {
+    flex: 1;
+    padding: 10px 16px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+.search-form button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: black;
+}
+
+/*check button*/
+.foodplan-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-check-foodplan {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-check-foodplan:hover {
+    background-color: #45a049;
+}
+
+.check-foodplan-form {
+    margin: 0;
+}
+ /* program button*/
+.btn-check-program {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-check-program:hover {
+    background-color:  #2980b9;
+}
+
+.check-program-form {
+    margin: 0;
+}
+
+.fixed-size-image {
+    object-fit: cover; /* обрізає, зберігаючи пропорції */
+    width: 100%;
+    max-width: 1280px;
+    height: auto;
+    aspect-ratio: 1280 / 768;
+    border-radius: 10px; /* опційно для краси */
+    display: block;
+    margin: 0 auto;
+}
+
+.supplement-body {
+    background-color: #f9f9f9;
+    padding: 2rem;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.supplement-image {
+    width: 100%;
+    max-width: 1280px;
+    height: auto;
+    aspect-ratio: 1280 / 768;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.supplement-details {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.supplement-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.supplement-category {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.supplement-content {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
