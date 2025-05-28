@@ -1,5 +1,9 @@
-from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
+from django.db.models import Q
+from django.shortcuts import render, redirect
 from django.conf import settings
+from django.utils.decorators import method_decorator
+
 from fitness.models import Programs, Exercises
 from django.views.generic import ListView, DetailView
 from django.shortcuts import render, get_object_or_404
@@ -26,6 +30,11 @@ class ProgramsHome(FitnessMixin,ListView):
     allow_empty = False
 
     def get_queryset(self):
+        query = self.request.GET.get('q')
+        if query:
+            return Programs.objects.filter(
+                Q(name__icontains=query) | Q(description__icontains=query)
+            )
         return Programs.objects.all()
 
     def get_context_data(self,**kwargs):
@@ -44,6 +53,17 @@ class Program(FitnessMixin,DetailView):
         context = super().get_context_data(**kwargs)
         default_program_photo = settings.DEFAULT_PROGRAM_IMAGE
         return self.get_mixin_context(context, default_program_photo=default_program_photo)
+
+    @method_decorator(login_required)
+    def post(self, request, *args, **kwargs):
+        program = self.get_object()
+        user = request.user
+
+        # Просто назначаем выбранную фитнес-программу
+        user.selected_fitness_program = program
+        user.save()
+
+        return redirect('user:profile')
 
 class ExerciseView(FitnessMixin,DetailView):
     template_name = 'fitness/exercise_detail.html'

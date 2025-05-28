@@ -1,14 +1,22 @@
 {% extends "base.html" %}
-{%load lifestyle_tags%}
+{% load lifestyle_tags %}
+
+{% block body_class %}supplement-body{% endblock %}
 
 {% block content %}
-<h1>{{supp.name}}</h1>
-<p>{{supp.category}}</p>
-{% if supp.photo %}
-<p><img class="img-article-left" class="img-article-left" src="{{supp.photo.url}}"></p>
-{%else%}
-<p><img class="img-article-left" class="img-article-left" src="{{default_photo_supp}}"></p>
-{% endif %}
-{{supp.content|linebreaks}}
+<div class="image-container">
+    {% if supp.photo %}
+        <img class="centered-image supplement-image" src="{{ supp.photo.url }}" alt="{{ supp.name }}">
+    {% else %}
+        <img class="centered-image supplement-image" src="{{ default_photo_supp }}" alt="Default Supplement Image">
+    {% endif %}
+</div>
 
+<div class="supplement-details">
+    <h2 class="supplement-title">{{ supp.name }}</h2>
+    <p class="supplement-category">{{ supp.category }}</p>
+    <div class="supplement-content">
+        {{ supp.content|linebreaks }}
+    </div>
+</div>
 {% endblock %}
