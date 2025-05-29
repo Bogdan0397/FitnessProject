@@ -22,19 +22,27 @@ def lifestylehome(request):
 class FoodPlansHome(DataMixin,ListView):
     template_name = 'lifestyle/foodplans_home.html'
     context_object_name = 'foodplans'
-    allow_empty = False
+    allow_empty = True
 
     def get_queryset(self):
         query = self.request.GET.get('q')
+        goal = self.request.GET.get('goal')
+        diet_type = self.request.GET.get('diet_type')
+
+        qs = FoodPlans.objects.all()
         if query:
-            return FoodPlans.objects.filter(
-                Q(name__icontains=query) | Q(description__icontains=query)
-            )
-        return FoodPlans.objects.all()
+            qs = qs.filter(Q(name__icontains=query) | Q(description__icontains=query))
+        if goal:
+            qs = qs.filter(goal=goal)
+        if diet_type:
+            qs = qs.filter(diet_type=diet_type)
+        return qs
 
 
     def get_context_data(self,**kwargs):
         context = super().get_context_data(**kwargs)
+        context['foodplan_goals'] = FoodPlans.GOAL_CHOICES
+        context['foodplan_diet_types'] = FoodPlans.DIET_TYPE_CHOICES
         default_photo_foodplans_home = settings.DEFAULT_FOODPLAN_IMAGE
         return self.get_mixin_context(context, default_photo_foodplans_home=default_photo_foodplans_home)
 
@@ -58,7 +66,6 @@ class Foodplan(DataMixin,DetailView):
         program = self.get_object()
         user = request.user
 
-        # Просто назначаем выбранную фитнес-программу
         user.selected_nutrition_program = program
         user.save()
 

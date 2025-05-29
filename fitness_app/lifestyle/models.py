@@ -15,10 +15,29 @@ class Lifestyle(models.Model):
 
 
 class FoodPlans(models.Model):
+
+    GOAL_CHOICES = [
+        ('weight_loss', 'Weight Loss'),
+        ('maintenance', 'Maintenance'),
+        ('weight_gain', 'Weight Gain'),
+        ('muscle_gain', 'Muscle Gain'),
+    ]
+
+    DIET_TYPE_CHOICES = [
+        ('vegan', 'Vegan'),
+        ('vegetarian', 'Vegetarian'),
+        ('keto', 'Keto'),
+        ('balanced', 'Balanced'),
+        ('low_carb', 'Low Carb'),
+    ]
+
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, unique=True, db_index=True)
     description = models.CharField(max_length=1500)
     photo = models.ImageField(upload_to='photos/foodplans',default=None,null=True,blank=True,verbose_name='Photo_Foodplan')
+
+    goal = models.CharField(max_length=20, choices=GOAL_CHOICES, default='maintenance')
+    diet_type = models.CharField(max_length=20, choices=DIET_TYPE_CHOICES, default='balanced')
     def get_absolute_url(self):
         return reverse('foodplan',kwargs={'foodplan_slug': self.slug})
 

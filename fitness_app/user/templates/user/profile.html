@@ -24,10 +24,11 @@
                 {% endif %}
             {% endfor %}
 
-            <button type="submit" class="save-button">Зберегти</button>
+            <button type="submit" class="save-button">Save</button>
         </form>
     </div>
 
+    <div class="side-widgets">
     <div class="programs-panel">
         {% if nutrition_program %}
         <a href="{% url 'foodplan' nutrition_program.slug %}" class="program-box nutrition-box">
@@ -43,6 +44,19 @@
         </a>
         {% endif %}
     </div>
+
+    {% if calories %}
+    <div class="calorie-panel">
+        <h3>Recommended Daily Calories</h3>
+        <p><strong>Maintenance:</strong> {{ calories.maintenance }} kcal/day</p>
+        <p><strong>Weight Loss:</strong> {{ calories.loss }} kcal/day</p>
+        <p><strong>Weight Gain:</strong> {{ calories.gain }} kcal/day</p>
+    </div>
+    {% endif %}
 </div>
+
+</div>
+
+
 {% endblock %}
 
