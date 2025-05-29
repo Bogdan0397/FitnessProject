@@ -8,7 +8,22 @@
   <div class="search-wrapper">
   <form method="get" action="{% url 'foodplans_home' %}" class="search-form">
     <input type="text" name="q" placeholder="Search for a food plan..." value="{{ request.GET.q }}">
-    <button type="submit">Search</button>
+
+      <select name="goal">
+        <option value="">Goal</option>
+        {% for val, label in foodplan_goals %}
+          <option value="{{ val }}" {% if val == request.GET.goal %}selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select>
+
+      <select name="diet_type">
+        <option value="">Diet type</option>
+        {% for val, label in foodplan_diet_types %}
+          <option value="{{ val }}" {% if val == request.GET.diet_type %}selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select>
+
+      <button type="submit">Search</button>
   </form>
 </div>
 <div class="div-block">

@@ -7,12 +7,37 @@ class Workout(models.Model):
     slug = models.SlugField(max_length=100, unique=True, db_index=True)
 
 class Programs(models.Model):
+
+    DIFFICULTY_CHOICES = [
+        ('beginner', 'Beginner'),
+        ('intermediate', 'Intermediate'),
+        ('advanced', 'Advanced'),
+    ]
+
+    DURATION_CHOICES = [
+        ('short', 'Up to 4 weeks'),
+        ('medium', '4 to 8 weeks'),
+        ('long', 'More than 8 weeks'),
+    ]
+
+    GOAL_CHOICES = [
+        ('strength', 'Build Strength'),
+        ('endurance', 'Improve Endurance'),
+        ('weight_loss', 'Weight Loss'),
+        ('mobility', 'Mobility & Flexibility'),
+    ]
+
     exercises = models.ManyToManyField('Exercises', related_name='exercises', blank=True, verbose_name='Exercises')
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, unique=True, db_index=True)
     photo = models.ImageField(upload_to='photos/programs', default=None, null=True, blank=True,
                               verbose_name='Photo_Program')
     description = models.TextField(max_length=250,null=True)
+
+    difficulty = models.CharField(max_length=20, choices=DIFFICULTY_CHOICES, default='beginner')
+    duration = models.CharField(max_length=20, choices=DURATION_CHOICES, default='medium')
+    goal = models.CharField(max_length=20, choices=GOAL_CHOICES, default='strength')
+
     def get_absolute_url(self):
         return reverse('program',kwargs={'program_slug': self.slug})
 

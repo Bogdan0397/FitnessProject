@@ -27,19 +27,43 @@ def workouthome(request):
 class ProgramsHome(FitnessMixin,ListView):
     template_name = 'fitness/programs_home.html'
     context_object_name = 'programs'
-    allow_empty = False
+    allow_empty = True
 
     def get_queryset(self):
         query = self.request.GET.get('q')
-        if query:
-            return Programs.objects.filter(
-                Q(name__icontains=query) | Q(description__icontains=query)
-            )
-        return Programs.objects.all()
+        difficulty = self.request.GET.get('difficulty')
+        duration = self.request.GET.get('duration')
+        goal = self.request.GET.get('goal')
 
-    def get_context_data(self,**kwargs):
+        qs = Programs.objects.all()
+
+        if query:
+            qs = qs.filter(Q(name__icontains=query) | Q(description__icontains=query))
+
+        if difficulty:
+            qs = qs.filter(difficulty=difficulty)
+
+        if duration:
+            qs = qs.filter(duration=duration)
+
+        if goal:
+            qs = qs.filter(goal=goal)
+
+        return qs
+
+    def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         default_program_photo = settings.DEFAULT_PROGRAM_IMAGE
+
+        context.update({
+            'selected_difficulty': self.request.GET.get('difficulty', ''),
+            'selected_duration':   self.request.GET.get('duration', ''),
+            'selected_goal':       self.request.GET.get('goal', ''),
+            'difficulty_choices':  Programs.DIFFICULTY_CHOICES,
+            'duration_choices':    Programs.DURATION_CHOICES,
+            'goal_choices':        Programs.GOAL_CHOICES,
+        })
+
         return self.get_mixin_context(context, default_program_photo=default_program_photo)
 
 class Program(FitnessMixin,DetailView):

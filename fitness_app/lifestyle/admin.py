@@ -30,7 +30,8 @@ class MealsAdmin(admin.ModelAdmin):
 @admin.register(FoodPlans)
 class FoodPlansAdmin(admin.ModelAdmin):
     form = FoodPlanAdminForm
-    list_display = ('name', 'slug','photo')
+    list_display = ('name', 'slug','photo','goal','diet_type')
+    fields = ('name', 'slug', 'photo', 'goal', 'diet_type','description')
     search_fields = ('name',)
     inlines = [DayInline]  # Добавление inline для дней
 

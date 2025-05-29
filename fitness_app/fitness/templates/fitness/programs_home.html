@@ -1,32 +1,54 @@
 {% extends "base.html" %}
-{%load lifestyle_tags%}
+{% load lifestyle_tags %}
 {% block title %}Life Style{% endblock %}
-
 
 {% block content %}
 <section>
-    <div class="search-wrapper">
-  <form method="get" action="{% url 'programs_home' %}" class="search-form">
-    <input type="text" name="q" placeholder="Search for a exercise plan..." value="{{ request.GET.q }}">
-    <button type="submit">Search</button>
-  </form>
-</div>
-<div class="div-block">
-{% for post in programs %}
-<a href="{{ post.get_absolute_url }}" class="post-link">
-    <div class="post-tile">
+  <div class="search-wrapper">
+    <form method="get" action="{% url 'programs_home' %}" class="search-form">
+      <input type="text" name="q" placeholder="Search for a exercise plan..." value="{{ request.GET.q }}">
+
+      <select name="difficulty">
+        <option value="">Difficulty</option>
+        {% for val, label in difficulty_choices %}
+          <option value="{{ val }}" {% if val == selected_difficulty %}selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select>
+
+      <select name="duration">
+        <option value="">Duration</option>
+        {% for val, label in duration_choices %}
+          <option value="{{ val }}" {% if val == selected_duration %}selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select>
+
+      <select name="goal">
+        <option value="">Goal</option>
+        {% for val, label in goal_choices %}
+          <option value="{{ val }}" {% if val == selected_goal %}selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select>
+
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  <div class="div-block">
+    {% for post in programs %}
+    <a href="{{ post.get_absolute_url }}" class="post-link">
+      <div class="post-tile">
         {% if post.photo %}
         <div class="post-image" style="background-image: url('{{ post.photo.url }}');"></div>
         {% else %}
         <div class="post-image" style="background-image: url('{{ default_program_photo }}');"></div>
         {% endif %}
         <div class="post-content">
-            <h3>{{ post.name }}</h3>
-            <p>{{ post.description|truncatechars:60 }}</p>
+          <h3>{{ post.name }}</h3>
+          <p>{{ post.description|truncatechars:60 }}</p>
         </div>
-    </div>
-</a>
-{% endfor %}
-</div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
 </section>
 {% endblock %}
