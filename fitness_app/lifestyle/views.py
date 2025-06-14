@@ -88,7 +88,7 @@ class DishView(DataMixin,DetailView):
 class SupplementsHome(DataMixin,ListView):
     template_name = 'lifestyle/supp_home.html'
     context_object_name = 'supplements'
-    allow_empty = False
+    allow_empty = True
 
     def get_queryset(self):
         return Supplements.objects.all()
