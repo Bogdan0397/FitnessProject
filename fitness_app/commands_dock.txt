@@ -1,0 +1,9 @@
+docker-compose exec web-app python manage.py migrate
+змінити redis в settings
+from dotenv import load_dotenv # for local environment variables
+
+load_dotenv()
+
+creds:
+root
+1234

@@ -7,7 +7,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse, reverse_lazy
 from django.views.generic import CreateView, UpdateView
 
-from user.forms import LoginUserForm, RegisterUserForm, ProfileUserForm
+from .forms import LoginUserForm, RegisterUserForm, ProfileUserForm
 from datetime import date
 
 

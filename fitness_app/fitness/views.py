@@ -4,11 +4,11 @@ from django.shortcuts import render, redirect
 from django.conf import settings
 from django.utils.decorators import method_decorator
 
-from fitness.models import Programs, Exercises
+from .models import Programs, Exercises
 from django.views.generic import ListView, DetailView
 from django.shortcuts import render, get_object_or_404
 
-from fitness.utils import FitnessMixin
+from .utils import FitnessMixin
 
 
 def home(request):
