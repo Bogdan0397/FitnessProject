@@ -4,38 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86079984-a8f8-4cc2-aedc-ce19ada93fa5" name="Changes" comment="new env, new migrations">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/migrations/0002_alter_programs_exercises.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/migrations/0003_exercises_photo_programs_photo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/migrations/0004_programs_description.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/migrations/0005_alter_programs_description.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/migrations/0006_exercises_repetitions_exercises_times.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/migrations/0007_exercises_video_link.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/migrations/0008_programs_difficulty_programs_duration_programs_goal.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0002_remove_foodplans_meals.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0003_foodplans_description.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0004_alter_day_food_plan.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0005_meals_photo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0006_foodplans_photo_alter_meals_photo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0007_supplement_cat_supplements.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0008_alter_supplements_category.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0009_alter_foodplans_description.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0010_alter_foodplans_description.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0011_meals_calories_meals_weight.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0012_meals_description_alter_meals_content.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0013_alter_meals_slug.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0014_alter_meals_slug.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0015_alter_meals_slug.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0016_supplements_description_alter_supplements_content.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0017_meals_carbs_meals_fats_meals_proteins.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0018_foodplans_diet_type_foodplans_goal.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/user/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/user/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/user/migrations/0002_user_selected_fitness_program_and_more.py" beforeDir="false" />
-    </list>
+    <list default="true" id="86079984-a8f8-4cc2-aedc-ce19ada93fa5" name="Changes" comment="test commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,7 +146,7 @@
       <workItem from="1762355081887" duration="179000" />
       <workItem from="1762355494571" duration="731000" />
       <workItem from="1762356253907" duration="388000" />
-      <workItem from="1762356660627" duration="59000" />
+      <workItem from="1762356660627" duration="359000" />
     </task>
     <task id="LOCAL-00001" summary="my">
       <option name="closed" value="true" />
@@ -282,7 +251,23 @@
       <option name="project" value="LOCAL" />
       <updated>1759678385625</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="new env, new migrations">
+      <option name="closed" value="true" />
+      <created>1762356774774</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1762356774774</updated>
+    </task>
+    <task id="LOCAL-00016" summary="test commit">
+      <option name="closed" value="true" />
+      <created>1762357020078</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1762357020078</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,6 +290,7 @@
     <MESSAGE value="common settings" />
     <MESSAGE value="some changes" />
     <MESSAGE value="new env, new migrations" />
-    <option name="LAST_COMMIT_MESSAGE" value="new env, new migrations" />
+    <MESSAGE value="test commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="test commit" />
   </component>
 </project>
