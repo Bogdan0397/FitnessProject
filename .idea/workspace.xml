@@ -4,8 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86079984-a8f8-4cc2-aedc-ce19ada93fa5" name="Changes" comment="some changes">
+    <list default="true" id="86079984-a8f8-4cc2-aedc-ce19ada93fa5" name="Changes" comment="new env, new migrations">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/migrations/0002_alter_programs_exercises.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/migrations/0003_exercises_photo_programs_photo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/migrations/0004_programs_description.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/migrations/0005_alter_programs_description.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/migrations/0006_exercises_repetitions_exercises_times.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/migrations/0007_exercises_video_link.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/migrations/0008_programs_difficulty_programs_duration_programs_goal.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0002_remove_foodplans_meals.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0003_foodplans_description.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0004_alter_day_food_plan.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0005_meals_photo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0006_foodplans_photo_alter_meals_photo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0007_supplement_cat_supplements.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0008_alter_supplements_category.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0009_alter_foodplans_description.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0010_alter_foodplans_description.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0011_meals_calories_meals_weight.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0012_meals_description_alter_meals_content.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0013_alter_meals_slug.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0014_alter_meals_slug.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0015_alter_meals_slug.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0016_supplements_description_alter_supplements_content.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0017_meals_carbs_meals_fats_meals_proteins.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/migrations/0018_foodplans_diet_type_foodplans_goal.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/user/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/user/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/user/migrations/0002_user_selected_fitness_program_and_more.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,10 +66,13 @@
     &quot;assignee&quot;: &quot;Bogdan0397&quot;
   }
 }</component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="e50ff1cb-5e8d-42f4-bc7b-65fdb018146a" />
+  </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Bogdan0397/FitnessProject.git&quot;,
-    &quot;accountId&quot;: &quot;9ccd4669-a933-4ee6-8ca2-229895f60eec&quot;
+    &quot;accountId&quot;: &quot;e50ff1cb-5e8d-42f4-bc7b-65fdb018146a&quot;
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
@@ -60,28 +92,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "29.10.25",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/FitnessProject/fitness_app/fitness/static/fitness/images",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "two.files.diff.last.used.folder": "C:/Users/Yaryk1488/Desktop/FitnessProject/fitness_app/lifestyle",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/FitnessProject/fitness_app/fitness/static/fitness/images&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;two.files.diff.last.used.folder&quot;: &quot;C:/Users/Yaryk1488/Desktop/FitnessProject/fitness_app/lifestyle&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Yaryk1488\Desktop\FitnessProject\fitness_app\fitness\static\fitness\images" />
@@ -122,7 +155,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-e0ed3721d81e-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.25410.159" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-PY-252.27397.106" />
+        <option value="bundled-python-sdk-4e2b1448bda8-9a97661f3031-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.27397.106" />
       </set>
     </attachedChunks>
   </component>
@@ -137,6 +171,13 @@
       <workItem from="1749330665105" duration="250000" />
       <workItem from="1749900668283" duration="1413000" />
       <workItem from="1753082178891" duration="9000" />
+      <workItem from="1762353697029" duration="41000" />
+      <workItem from="1762353749456" duration="713000" />
+      <workItem from="1762354480717" duration="398000" />
+      <workItem from="1762355081887" duration="179000" />
+      <workItem from="1762355494571" duration="731000" />
+      <workItem from="1762356253907" duration="388000" />
+      <workItem from="1762356660627" duration="59000" />
     </task>
     <task id="LOCAL-00001" summary="my">
       <option name="closed" value="true" />
@@ -263,6 +304,7 @@
     <MESSAGE value="my" />
     <MESSAGE value="common settings" />
     <MESSAGE value="some changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="some changes" />
+    <MESSAGE value="new env, new migrations" />
+    <option name="LAST_COMMIT_MESSAGE" value="new env, new migrations" />
   </component>
 </project>
