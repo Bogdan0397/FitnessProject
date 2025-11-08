@@ -5,3 +5,4 @@ class DataMixin:
         context['selected_menu'] = 'Life Style'
         context.update(kwargs)
         return context
+

@@ -1,0 +1,302 @@
+[
+  {
+    "model": "lifestyle.meals",
+    "pk": 1,
+    "fields": {
+      "name": "Grilled Chicken with Vegetables",
+      "slug": "grilled-chicken-with-vegetables",
+      "content": "Tender grilled chicken breast served with a mix of roasted seasonal vegetables.",
+      "calories": 420,
+      "weight": 300,
+      "description": "A healthy, protein-rich meal perfect for lunch or dinner.",
+      "proteins": 45,
+      "fats": 10,
+      "carbs": 20
+    }
+  },
+  {
+    "model": "lifestyle.meals",
+    "pk": 2,
+    "fields": {
+      "name": "Oatmeal with Berries",
+      "slug": "oatmeal-with-berries",
+      "content": "Warm oatmeal topped with fresh strawberries, blueberries, and a drizzle of honey.",
+      "calories": 310,
+      "weight": 250,
+      "description": "A nutritious breakfast full of fiber and antioxidants.",
+      "proteins": 10,
+      "fats": 5,
+      "carbs": 55
+    }
+  },
+  {
+    "model": "lifestyle.meals",
+    "pk": 3,
+    "fields": {
+      "name": "Salmon with Quinoa and Spinach",
+      "slug": "salmon-with-quinoa-and-spinach",
+      "content": "Pan-seared salmon fillet served with cooked quinoa and sautéed spinach.",
+      "calories": 480,
+      "weight": 320,
+      "description": "A balanced dish rich in omega-3 fats and plant-based protein.",
+      "proteins": 42,
+      "fats": 18,
+      "carbs": 25
+    }
+  },
+  {
+    "model": "lifestyle.meals",
+    "pk": 4,
+    "fields": {
+      "name": "Greek Yogurt with Nuts and Honey",
+      "slug": "greek-yogurt-with-nuts-and-honey",
+      "content": "Creamy Greek yogurt topped with almonds, walnuts, and a spoon of natural honey.",
+      "calories": 280,
+      "weight": 200,
+      "description": "A quick, delicious, and protein-packed snack.",
+      "proteins": 18,
+      "fats": 9,
+      "carbs": 28
+    }
+  },
+  {
+    "model": "lifestyle.meals",
+    "pk": 5,
+    "fields": {
+      "name": "Vegetable Omelette",
+      "slug": "vegetable-omelette",
+      "content": "Fluffy omelette with bell peppers, onions, mushrooms, and spinach.",
+      "calories": 250,
+      "weight": 220,
+      "description": "A classic breakfast with a boost of vitamins and minerals.",
+      "proteins": 16,
+      "fats": 15,
+      "carbs": 10
+    }
+  },
+  {
+    "model": "lifestyle.meals",
+    "pk": 6,
+    "fields": {
+      "name": "Beef Stir-Fry with Rice",
+      "slug": "beef-stir-fry-with-rice",
+      "content": "Tender beef strips cooked with soy sauce and vegetables, served with steamed rice.",
+      "calories": 530,
+      "weight": 350,
+      "description": "A satisfying meal rich in iron and complex carbohydrates.",
+      "proteins": 38,
+      "fats": 20,
+      "carbs": 45
+    }
+  },
+  {
+    "model": "lifestyle.meals",
+    "pk": 7,
+    "fields": {
+      "name": "Avocado Toast with Egg",
+      "slug": "avocado-toast-with-egg",
+      "content": "Whole-grain toast topped with mashed avocado and a poached egg.",
+      "calories": 330,
+      "weight": 180,
+      "description": "Perfect breakfast for healthy fats and energy.",
+      "proteins": 14,
+      "fats": 22,
+      "carbs": 20
+    }
+  },
+  {
+    "model": "lifestyle.meals",
+    "pk": 8,
+    "fields": {
+      "name": "Turkey and Vegetable Soup",
+      "slug": "turkey-and-vegetable-soup",
+      "content": "Light broth with turkey breast, carrots, celery, and herbs.",
+      "calories": 190,
+      "weight": 300,
+      "description": "A low-calorie, comforting meal for any time of the day.",
+      "proteins": 20,
+      "fats": 5,
+      "carbs": 12
+    }
+  },
+  {
+    "model": "lifestyle.meals",
+    "pk": 9,
+    "fields": {
+      "name": "Tuna Salad with Olive Oil",
+      "slug": "tuna-salad-with-olive-oil",
+      "content": "Canned tuna with lettuce, cherry tomatoes, cucumbers, and olive oil.",
+      "calories": 260,
+      "weight": 220,
+      "description": "A light and refreshing protein-packed salad.",
+      "proteins": 28,
+      "fats": 12,
+      "carbs": 8
+    }
+  },
+  {
+    "model": "lifestyle.meals",
+    "pk": 10,
+    "fields": {
+      "name": "Protein Smoothie",
+      "slug": "protein-smoothie",
+      "content": "A blend of banana, whey protein, peanut butter, and almond milk.",
+      "calories": 350,
+      "weight": 400,
+      "description": "An excellent post-workout shake for recovery.",
+      "proteins": 30,
+      "fats": 10,
+      "carbs": 35
+    }
+  },
+  {
+    "model": "lifestyle.meals",
+    "pk": 11,
+    "fields": {
+      "name": "Baked Cod with Potatoes",
+      "slug": "baked-cod-with-potatoes",
+      "content": "Oven-baked cod fillet served with boiled baby potatoes and parsley.",
+      "calories": 370,
+      "weight": 300,
+      "description": "Light and nutritious seafood dish.",
+      "proteins": 34,
+      "fats": 12,
+      "carbs": 25
+    }
+  },
+  {
+    "model": "lifestyle.meals",
+    "pk": 12,
+    "fields": {
+      "name": "Chicken Caesar Salad",
+      "slug": "chicken-caesar-salad",
+      "content": "Crisp romaine lettuce with grilled chicken, parmesan, and Caesar dressing.",
+      "calories": 410,
+      "weight": 280,
+      "description": "A classic favorite packed with flavor and protein.",
+      "proteins": 32,
+      "fats": 22,
+      "carbs": 18
+    }
+  },
+  {
+    "model": "lifestyle.meals",
+    "pk": 13,
+    "fields": {
+      "name": "Lentil Stew with Vegetables",
+      "slug": "lentil-stew-with-vegetables",
+      "content": "Hearty stew with lentils, carrots, and potatoes in tomato sauce.",
+      "calories": 320,
+      "weight": 350,
+      "description": "Vegan-friendly meal rich in plant-based protein and fiber.",
+      "proteins": 18,
+      "fats": 6,
+      "carbs": 50
+    }
+  },
+  {
+    "model": "lifestyle.meals",
+    "pk": 14,
+    "fields": {
+      "name": "Shrimp Pasta with Garlic Sauce",
+      "slug": "shrimp-pasta-with-garlic-sauce",
+      "content": "Spaghetti with sautéed shrimp in a light garlic and olive oil sauce.",
+      "calories": 490,
+      "weight": 320,
+      "description": "A flavorful Mediterranean-style dish.",
+      "proteins": 30,
+      "fats": 14,
+      "carbs": 60
+    }
+  },
+  {
+    "model": "lifestyle.meals",
+    "pk": 15,
+    "fields": {
+      "name": "Tofu Stir-Fry with Vegetables",
+      "slug": "tofu-stir-fry-with-vegetables",
+      "content": "Crispy tofu cubes cooked with colorful veggies in a soy-based sauce.",
+      "calories": 350,
+      "weight": 280,
+      "description": "A vegan, protein-rich option that’s light and satisfying.",
+      "proteins": 22,
+      "fats": 12,
+      "carbs": 35
+    }
+  },
+  {
+    "model": "lifestyle.meals",
+    "pk": 16,
+    "fields": {
+      "name": "Eggplant Lasagna",
+      "slug": "eggplant-lasagna",
+      "content": "Layers of grilled eggplant, tomato sauce, and mozzarella cheese.",
+      "calories": 420,
+      "weight": 300,
+      "description": "A lower-carb twist on traditional lasagna.",
+      "proteins": 24,
+      "fats": 18,
+      "carbs": 30
+    }
+  },
+  {
+    "model": "lifestyle.meals",
+    "pk": 17,
+    "fields": {
+      "name": "Brown Rice with Chicken Curry",
+      "slug": "brown-rice-with-chicken-curry",
+      "content": "Spicy chicken curry served with steamed brown rice.",
+      "calories": 510,
+      "weight": 350,
+      "description": "A flavorful and filling Asian-inspired meal.",
+      "proteins": 40,
+      "fats": 18,
+      "carbs": 45
+    }
+  },
+  {
+    "model": "lifestyle.meals",
+    "pk": 18,
+    "fields": {
+      "name": "Vegetable Wrap with Hummus",
+      "slug": "vegetable-wrap-with-hummus",
+      "content": "Whole-wheat tortilla filled with hummus, lettuce, cucumber, and carrots.",
+      "calories": 280,
+      "weight": 220,
+      "description": "A light vegan wrap ideal for lunch on the go.",
+      "proteins": 12,
+      "fats": 8,
+      "carbs": 38
+    }
+  },
+  {
+    "model": "lifestyle.meals",
+    "pk": 19,
+    "fields": {
+      "name": "Baked Sweet Potato with Cottage Cheese",
+      "slug": "baked-sweet-potato-with-cottage-cheese",
+      "content": "Soft baked sweet potato stuffed with creamy cottage cheese.",
+      "calories": 290,
+      "weight": 250,
+      "description": "A balanced snack with slow carbs and lean protein.",
+      "proteins": 16,
+      "fats": 7,
+      "carbs": 40
+    }
+  },
+  {
+    "model": "lifestyle.meals",
+    "pk": 20,
+    "fields": {
+      "name": "Quinoa Salad with Chickpeas",
+      "slug": "quinoa-salad-with-chickpeas",
+      "content": "Cold salad with quinoa, chickpeas, cucumbers, and olive oil.",
+      "calories": 310,
+      "weight": 260,
+      "description": "Refreshing, high-fiber vegan meal full of nutrients.",
+      "proteins": 14,
+      "fats": 10,
+      "carbs": 40
+    }
+  }
+]

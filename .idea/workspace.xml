@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86079984-a8f8-4cc2-aedc-ce19ada93fa5" name="Changes" comment="test commit" />
+    <list default="true" id="86079984-a8f8-4cc2-aedc-ce19ada93fa5" name="Changes" comment="test commit">
+      <change afterPath="$PROJECT_DIR$/fitness_app/lifestyle/fixtures/meals_data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitness_app/media/photos/foodplans/Around-the-world.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitness_app/media/photos/foodplans/Around-the-world_eQ6lewT.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitness_app/media/photos/foodplans/o_21_fb-meal-plan-eat-real-food-and-feel-great_RrS15nv.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitness_app/media/photos/programs/18943-10-day-challenge-trainer-series-barre-and-build-with-erica-ab40_5islzJ1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitness_app/media/photos/programs/22310-fb-low-impact-round-3-95b1_C8G4ewC.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitness_app/media/photos/programs/22534-fb-30-round-5-9427_HX1w58p.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitness_app/media/photos/programs/23272-10-day-challenge-trainer-series-strong-and-sculpted-with-patrice-9_cIoQQ1E.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitness_app/media/photos/supplement_photos/61MUu5oTHgL_NoXBATc.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitness_app/media/photos/supplement_photos/A1f9JI-9QxL_SA6bKNJ.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitness_app/media/photos/supplement_photos/sf6se6g8yqc8rjdnzny2omp6avovz9r5_gvi3K7Q.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitness_app/media/users/2025/11/08/1216465.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/templates/lifestyle/list_days.html" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/lifestyle/templates/lifestyle/list_days.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/lifestyle/utils.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,8 +34,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -61,29 +79,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/FitnessProject/fitness_app/fitness/static/fitness/images&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;two.files.diff.last.used.folder&quot;: &quot;C:/Users/Yaryk1488/Desktop/FitnessProject/fitness_app/lifestyle&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/FitnessProject/fitness_app/fitness/static/fitness/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "two.files.diff.last.used.folder": "C:/Users/Yaryk1488/Desktop/FitnessProject/fitness_app/lifestyle",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Yaryk1488\Desktop\FitnessProject\fitness_app\fitness\static\fitness\images" />
@@ -146,7 +164,9 @@
       <workItem from="1762355081887" duration="179000" />
       <workItem from="1762355494571" duration="731000" />
       <workItem from="1762356253907" duration="388000" />
-      <workItem from="1762356660627" duration="359000" />
+      <workItem from="1762356660627" duration="449000" />
+      <workItem from="1762457523631" duration="52000" />
+      <workItem from="1762601945298" duration="10075000" />
     </task>
     <task id="LOCAL-00001" summary="my">
       <option name="closed" value="true" />
@@ -267,7 +287,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762357020078</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="test commit">
+      <option name="closed" value="true" />
+      <created>1762357089014</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1762357089014</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,5 +320,16 @@
     <MESSAGE value="new env, new migrations" />
     <MESSAGE value="test commit" />
     <option name="LAST_COMMIT_MESSAGE" value="test commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/fitness_app/lifestyle/templatetags/lifestyle_tags.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
