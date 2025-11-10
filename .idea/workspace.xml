@@ -4,24 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86079984-a8f8-4cc2-aedc-ce19ada93fa5" name="Changes" comment="test commit">
-      <change afterPath="$PROJECT_DIR$/fitness_app/lifestyle/fixtures/meals_data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fitness_app/media/photos/foodplans/Around-the-world.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fitness_app/media/photos/foodplans/Around-the-world_eQ6lewT.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fitness_app/media/photos/foodplans/o_21_fb-meal-plan-eat-real-food-and-feel-great_RrS15nv.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fitness_app/media/photos/programs/18943-10-day-challenge-trainer-series-barre-and-build-with-erica-ab40_5islzJ1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fitness_app/media/photos/programs/22310-fb-low-impact-round-3-95b1_C8G4ewC.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fitness_app/media/photos/programs/22534-fb-30-round-5-9427_HX1w58p.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fitness_app/media/photos/programs/23272-10-day-challenge-trainer-series-strong-and-sculpted-with-patrice-9_cIoQQ1E.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fitness_app/media/photos/supplement_photos/61MUu5oTHgL_NoXBATc.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fitness_app/media/photos/supplement_photos/A1f9JI-9QxL_SA6bKNJ.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fitness_app/media/photos/supplement_photos/sf6se6g8yqc8rjdnzny2omp6avovz9r5_gvi3K7Q.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fitness_app/media/users/2025/11/08/1216465.jpg" afterDir="false" />
+    <list default="true" id="86079984-a8f8-4cc2-aedc-ce19ada93fa5" name="Changes" comment="added fuzzy filter requests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/templates/lifestyle/list_days.html" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/lifestyle/templates/lifestyle/list_days.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_app/lifestyle/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/lifestyle/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/fitness/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_app/fitness_app/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_app/fitness_app/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +75,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/FitnessProject/fitness_app/fitness/static/fitness/images",
@@ -166,7 +153,9 @@
       <workItem from="1762356253907" duration="388000" />
       <workItem from="1762356660627" duration="449000" />
       <workItem from="1762457523631" duration="52000" />
-      <workItem from="1762601945298" duration="10075000" />
+      <workItem from="1762601945298" duration="10118000" />
+      <workItem from="1762700734146" duration="2288000" />
+      <workItem from="1762779288094" duration="2650000" />
     </task>
     <task id="LOCAL-00001" summary="my">
       <option name="closed" value="true" />
@@ -295,7 +284,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762357089014</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="added fuzzy filter requests">
+      <option name="closed" value="true" />
+      <created>1762612141283</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1762612141283</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,7 +316,8 @@
     <MESSAGE value="some changes" />
     <MESSAGE value="new env, new migrations" />
     <MESSAGE value="test commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="test commit" />
+    <MESSAGE value="added fuzzy filter requests" />
+    <option name="LAST_COMMIT_MESSAGE" value="added fuzzy filter requests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

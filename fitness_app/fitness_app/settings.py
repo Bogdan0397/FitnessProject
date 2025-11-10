@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 import os
+import sys
 from pathlib import Path
 from dotenv import load_dotenv # for local environment variables
 
@@ -32,6 +33,8 @@ ALLOWED_HOSTS = []
 
 AUTH_USER_MODEL = 'user.User'
 # Application definition
+if 'test' in sys.argv:
+    CACHALOT_ENABLED = False
 
 INSTALLED_APPS = [
     'django.contrib.admin',
